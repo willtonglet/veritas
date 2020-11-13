@@ -1,0 +1,11 @@
+@import '@core/styles/mq';
+
+.container {
+    @include lg {
+        width: 1280px;
+    }
+
+    @include xl {
+        width: 1440px;
+    }
+}
