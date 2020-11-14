@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 import Container from '@components/Container';
 import Hamburger from '@components/Hamburger';
-import Context from 'context/Context';
+import Context from 'context';
 
 import styles from './styles.module.scss';
 

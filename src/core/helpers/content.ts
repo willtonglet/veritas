@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import Context from 'context/Context';
+import Context from 'context';
 
 const resolve = (path: string, content: PageContentContentInterface, separator = '.') => {
     const properties: any[] = Array.isArray(path) ? path : path.split(separator);

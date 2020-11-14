@@ -1,7 +1,7 @@
-import Context from './Context';
+import Context from '.';
 import { useState } from 'react';
 
-const NavContext: React.FC<PageProps> = ({ children, content }) => {
+const AppContext: React.FC<PageProps> = ({ children, content }) => {
     const [menuActive, setMenuActive] = useState(0);
 
     return (
@@ -11,4 +11,4 @@ const NavContext: React.FC<PageProps> = ({ children, content }) => {
     );
 };
 
-export default NavContext;
+export default AppContext;
