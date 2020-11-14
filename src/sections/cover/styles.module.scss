@@ -1,8 +1,64 @@
 @import '@core/styles/mq';
 @import '@core/styles/variables';
+@import '@core/styles/animations';
 
 .cover {
     background-color: $primary;
-    min-height: 100vh;
+    top: 0;
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    @include sm {
+        height: 690px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 3rem 3rem;
+
+        @include sm {
+            padding: 2rem;
+            flex-direction: row;
+        }
+
+        @include lg {
+            padding: unset;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__image {
+        opacity: 0;
+        align-self: flex-start;
+        animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    &__box {
+        background-color: $secondary;
+        align-self: center;
+        padding: 4rem 3rem;
+        margin-top: -3rem;
+        z-index: 2;
+
+        @include sm {
+            margin-top: unset;
+            padding: 6rem 3.5rem;
+        }
+
+        h1,
+        span {
+            color: $primary;
+            font-weight: $fontLight;
+            text-transform: uppercase;
+        }
+
+        span {
+            color: $primaryLight;
+        }
+    }
 }

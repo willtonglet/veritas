@@ -6,10 +6,11 @@ import styles from './styles.module.scss';
 interface Props {
     onClick?: MouseEventHandler;
     className?: string;
+    isActive: boolean;
 }
 
-const Hamburger: React.FC<Props> = ({ onClick, className }) => {
-    const [open, setIsOpen] = useState(false);
+const Hamburger: React.FC<Props> = ({ onClick, className, isActive = false }) => {
+    const [open, setIsOpen] = useState(isActive);
 
     const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         setIsOpen(!open);
@@ -20,7 +21,7 @@ const Hamburger: React.FC<Props> = ({ onClick, className }) => {
         <div
             role="button"
             aria-hidden="true"
-            className={clsx(styles.hamburger, open && styles.open, className)}
+            className={clsx(styles.hamburger, isActive && styles.open, className)}
             onClick={handleClick}
             onKeyPress={handleClick as () => void}
             tabIndex={0}>

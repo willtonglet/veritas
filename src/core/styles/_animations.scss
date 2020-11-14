@@ -1,0 +1,114 @@
+@keyframes load {
+    from {
+        width: 0vw;
+    }
+    to {
+        width: 100vw;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 100;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes left {
+    0% {
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes leftReverse {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+}
+
+@keyframes right {
+    0% {
+        opacity: 0;
+        transform: translateX(10vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rightReverse {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(10vw);
+    }
+}
+
+@keyframes top {
+    0% {
+        opacity: 0;
+        transform: translateY(-10vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes topReverse {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10vw);
+    }
+}
+
+@keyframes bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(10vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bottomReverse {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(10vw);
+    }
+}

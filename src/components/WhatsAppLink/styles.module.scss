@@ -1,0 +1,24 @@
+@import '@core/styles/mq';
+@import '@core/styles/variables';
+@import '@core/styles/animations';
+
+.whatsapp {
+    background-color: $green;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    animation: bottom 0.5s ease-in-out forwards;
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+        padding-bottom: 1.5rem;
+    }
+
+    &__icon {
+        width: 24px;
+    }
+}

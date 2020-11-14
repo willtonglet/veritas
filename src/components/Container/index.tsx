@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import styles from './styles.module.scss';
 
 interface Props {
-    className: string;
+    className?: string;
 }
 
 const Container: React.FC<Props> = ({ children, className }) => {

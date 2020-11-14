@@ -1,5 +1,6 @@
 @import '@core/styles/mq';
 @import '@core/styles/variables';
+@import '@core/styles/animations';
 
 .header {
     width: 100vw;
@@ -9,6 +10,7 @@
     position: sticky;
     align-items: center;
     top: 0;
+    z-index: 10;
 
     @include sm {
         align-items: unset;
@@ -67,7 +69,7 @@
             color: $primaryLight;
             font-weight: $fontLight;
             text-transform: uppercase;
-            padding: 3rem 1.5rem;
+            padding: 3rem 1.5rem 3.5rem;
             display: block;
             position: relative;
 
@@ -83,7 +85,8 @@
                 transition: 0.25s ease-in-out;
             }
 
-            &:hover {
+            &:hover,
+            &.active {
                 &::before {
                     width: 100%;
                 }
@@ -92,6 +95,8 @@
     }
 
     &__loader {
+        position: absolute;
+        bottom: -3px;
         height: 3px;
         width: 100vw;
 
@@ -154,14 +159,5 @@
                 }
             }
         }
-    }
-}
-
-@keyframes load {
-    from {
-        width: 0vw;
-    }
-    to {
-        width: 100vw;
     }
 }
