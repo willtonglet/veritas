@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import clsx from 'clsx';
 
 import Container from '@components/Container';
@@ -17,12 +17,28 @@ interface Props {
 
 const Header: React.FC<Props> = ({ routes }) => {
     const [menuOpen, setIsMenuOpen] = useState(false);
+    const [hasScrolled, setHasScrolled] = useState(false);
     const { menuActive, setMenuActive } = useContext(Context);
 
     const handleActiveMenu = (active: number) => {
         setMenuActive(active);
         setIsMenuOpen(!menuOpen);
     };
+
+    const renderLinkClassName = (index: number) =>
+        clsx(menuActive === index && styles.active, hasScrolled && styles.scroll);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            return setHasScrolled(window.scrollY > 600);
+        };
+
+        if (typeof window !== 'undefined') window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            if (typeof window !== 'undefined') window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const renderMenu = (
         <ul>
@@ -33,13 +49,14 @@ const Header: React.FC<Props> = ({ routes }) => {
                             href={route.website}
                             target="_blank"
                             rel="noreferrer"
+                            className={renderLinkClassName(index)}
                             onClick={() => handleActiveMenu(index)}>
                             {route.name}
                         </a>
                     ) : (
                         <a
                             href={route.route}
-                            className={clsx(menuActive === index && styles.active)}
+                            className={renderLinkClassName(index)}
                             onClick={() => handleActiveMenu(index)}>
                             {route.name}
                         </a>
@@ -54,7 +71,11 @@ const Header: React.FC<Props> = ({ routes }) => {
             <Container className={styles.header__container}>
                 <div className={styles.header__logo}>
                     <a href="/">
-                        <img src="logo.svg" alt="Veritás - Vila Madalena" />
+                        <img
+                            src="logo.svg"
+                            alt="Veritás - Vila Madalena"
+                            className={clsx(hasScrolled && styles.scroll)}
+                        />
                     </a>
                 </div>
                 <div className={styles.header__menu}>{renderMenu}</div>

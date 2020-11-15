@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { VscChevronDown } from 'react-icons/vsc';
 import Context from 'context';
 
 import styles from './styles.module.scss';
@@ -15,7 +16,7 @@ const ContactLink: React.FC<Props> = ({ href }) => {
                 <span className={styles['contact-link__text__title']}>Fale com um consultor</span>
                 <span>direto da construtora</span>
             </div>
-            <img src="/icons/down.svg" alt="Icon" className={styles['contact-link__icon']} />
+            <VscChevronDown className={styles['contact-link__icon']} />
         </a>
     );
 };

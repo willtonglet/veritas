@@ -1,0 +1,42 @@
+{
+  "title": "Veritás - Vila Madalena",
+  "meta": {
+    "description": "Veritás - Vila Madalena"
+  },
+  "content": {
+    "cover": {
+      "title": "<span>São Paulo</span><br />acaba de<br />ganhar<br />uma nova<br />identidade"
+    },
+    "info": {
+      "text": "Informações e Vendas",
+      "phone": "<span>(99)</span> 99999-9999",
+      "button": "Entre em contato via WhatsApp"
+    },
+    "empreendimento": {
+      "title": "O Empreendimento",
+      "mosaic": [
+        {
+          "title": "Área total",
+          "description": "1 Torre com área<br />de 1.636,00 M²",
+          "icon": "/icons/mosaic1.svg"
+        },
+        {
+          "title": "Vagas",
+          "description": "02 para unidades tipo E 03 para unidades duplex",
+          "icon": "/icons/mosaic1.svg"
+        },
+        {
+          "title": "Unidades por Andar",
+          "description": "02 unidades por andar, com térreo e 28 pavimentos",
+          "icon": "/icons/mosaic1.svg"
+        },
+        {
+          "title": "Localização",
+          "description": "7 minutos a pé do<br />metrô Sumaré",
+          "icon": "/icons/mosaic1.svg"
+        }
+      ],
+      "modalButton": "Ficha Completa"
+    }
+  }
+}

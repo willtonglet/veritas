@@ -3,7 +3,7 @@ export default {
         let data;
 
         try {
-            data = await import('../data/home/content.json');
+            data = await import('../data/content.json');
             if (!data) throw new Error('Conteúdo não encontrado');
         } catch (error) {
             throw new Error(error);

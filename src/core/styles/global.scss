@@ -1,18 +1,25 @@
 @import 'mq';
+@import 'variables';
 
 * {
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: $fontLight;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+
+    @include sm {
+        font-size: 14px;
+    }
 }
 
 h1,
 h2 {
     letter-spacing: 0.2rem;
     font-size: 26px;
+    text-transform: uppercase;
 
     @include sm {
         letter-spacing: 0.3rem;
@@ -27,6 +34,7 @@ h2 {
     * {
         letter-spacing: 0.2rem;
         font-size: 26px;
+        text-transform: uppercase;
 
         @include sm {
             letter-spacing: 0.3rem;
@@ -37,4 +45,8 @@ h2 {
             font-size: 38px;
         }
     }
+}
+
+section {
+    width: 100vw;
 }

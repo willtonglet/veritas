@@ -33,9 +33,10 @@
 
         img {
             width: 100%;
+            transition: 0.25s ease-in-out;
 
-            @include lg {
-                width: unset;
+            &.scroll {
+                width: 180px;
             }
         }
     }
@@ -72,6 +73,11 @@
             padding: 3rem 1.5rem 3.5rem;
             display: block;
             position: relative;
+            transition: 0.25s ease-in-out;
+
+            &.scroll {
+                padding: 2rem 1.5rem 2.5rem;
+            }
 
             &::before {
                 background-color: $secondary;
