@@ -1,5 +1,16 @@
 @import 'mq';
 @import 'variables';
+@import 'animations';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    &.window-blocked {
+        overflow: hidden;
+    }
+}
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -9,6 +20,7 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+    outline: none;
 
     @include sm {
         font-size: 14px;
@@ -23,7 +35,7 @@ h2 {
 
     @include sm {
         letter-spacing: 0.3rem;
-        font-size: 32px;
+        font-size: 30px;
     }
 
     @include lg {

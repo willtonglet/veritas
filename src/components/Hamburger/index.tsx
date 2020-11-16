@@ -1,10 +1,10 @@
-import { useState, MouseEventHandler } from 'react';
+import { useState } from 'react';
 import clsx from 'clsx';
 
 import styles from './styles.module.scss';
 
 interface Props {
-    onClick?: MouseEventHandler;
+    onClick?: React.MouseEventHandler;
     className?: string;
     isActive: boolean;
 }

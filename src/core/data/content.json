@@ -28,7 +28,7 @@
         {
           "title": "Unidades por Andar",
           "description": "02 unidades por andar, com térreo e 28 pavimentos",
-          "icon": "/icons/mosaic1.svg"
+          "icon": "/icons/mosaic3.svg"
         },
         {
           "title": "Localização",
@@ -36,7 +36,64 @@
           "icon": "/icons/mosaic1.svg"
         }
       ],
-      "modalButton": "Ficha Completa"
+      "modalButton": "Ficha Completa",
+      "modal": {
+        "title": "FICHA TÉCNICA",
+        "content": [
+          {
+            "title": "REALIZAÇÃO:",
+            "description": " GRUPO KALLAS"
+          },
+          {
+            "title": "INCORPORAÇÃO:",
+            "description": "KALLAS ARKHES"
+          },
+          {
+            "title": "PROJETO ARQUITETÔNICO:",
+            "description": "GAAZ ARQUITETURA"
+          },
+          {
+            "title": "PROJETO DE INTERIORES:",
+            "description": "JOÃO ARMENTANO"
+          },
+          {
+            "title": "PROJETO PAISAGÍSTICO:",
+            "description": "GILBERTO ELKIS"
+          },
+          {
+            "title": "ÁREA DO TERRENO:",
+            "description": "1.636,00 M²"
+          },
+          {
+            "title": "TORRE:",
+            "description": " 01"
+          },
+          {
+            "title": "NÚMEROD E ELEVADORES:",
+            "description": "2 SOCIAIS E 01 SERVIÇO"
+          },
+          {
+            "title": "NÚMERO DE PAVIMENTOS:",
+            "description": "3SS + TÉRREO + 28 PAVIMENTOS"
+          },
+          {
+            "title": "LOJAS:",
+            "description": "01"
+          },
+          {
+            "title": "UNIDADES",
+            "description": "POR ANDAR: 02 UNIDADES"
+          },
+          {
+            "title": "VAGAS:",
+            "description": "02 PARA UN. TIPO E 03 PARA UN. DUPLEX"
+          },
+          {
+            "title": "ÁREAS COMUNS:",
+            "description": "LOBBY, PLAYGROUND, PISCINA, FITNESS, BIBLIOTECA, ESPAÇO KIDS, SALÃO DE FESTAS, GALERIA, ESPAÇO GOURMET, SALÃO DE JOGOS E TERRAÇO GOURMET"
+          }
+        ]
+      }
     }
   }
 }

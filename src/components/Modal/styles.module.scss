@@ -1,0 +1,54 @@
+@import '@core/styles/mq';
+@import '@core/styles/variables';
+@import '@core/styles/animations';
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.25s ease-in-out forwards;
+
+    &__wrapper {
+        max-width: 960px;
+        z-index: 2;
+        position: relative;
+    }
+
+    &__container {
+        background-color: $primaryLight;
+        width: 100%;
+        padding: 4rem;
+        height: 100vh;
+        overflow-y: auto;
+
+        @include md {
+            height: 80vh;
+        }
+    }
+
+    &__close {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+
+        * {
+            font-size: 24px;
+        }
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: $fontSemiBold;
+        margin-bottom: 2rem;
+    }
+}

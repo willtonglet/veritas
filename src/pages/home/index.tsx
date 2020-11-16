@@ -11,9 +11,9 @@ import api from '@core/api';
 const Home: NextPage<PageProps> = (props) => {
     return (
         <Layout {...props}>
-            <Cover />
+            <Cover id="inicio" />
             <Info />
-            <Empreendimento />
+            <Empreendimento id="empreendimento" />
         </Layout>
     );
 };

@@ -9,6 +9,6 @@ export default {
             throw new Error(error);
         }
 
-        return data.default;
+        return (data.default as unknown) as PageContentContentInterface;
     }
 };

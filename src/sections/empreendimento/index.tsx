@@ -1,61 +1,98 @@
 import Image from 'next/image';
+import { useState } from 'react';
 import clsx from 'clsx';
 import { VscAdd } from 'react-icons/vsc';
 
 import Container from '@components/Container';
 import Content from '@components/Content';
+import Reveal from '@components/Reveal';
+import Modal from '@components/Modal';
 import { content } from '@core/helpers/content';
 
 import styles from './styles.module.scss';
 
-const Empreendimento: React.FC = () => {
+const Empreendimento: React.FC<SectionProps> = ({ id }) => {
+    const [isModalOpen, setModalOpen] = useState(false);
     const mosaic = (content('empreendimento.mosaic') as unknown) as MosaicInterface[];
+    const modalContent = (content('empreendimento.modal.content') as unknown) as {
+        title: string;
+        description: string;
+    }[];
 
     return (
-        <section className={styles.empreendimento}>
-            <Container className={styles.empreendimento__container}>
-                <div className={styles.empreendimento__grid}>
-                    <div className={styles.empreendimento__grid__text}>
-                        <Content id="empreendimento.title" tag="h1" />
-                        <div className={styles.empreendimento__grid__mosaic}>
-                            {mosaic.map((box, index) => (
-                                <div
-                                    key={index}
-                                    className={styles.empreendimento__grid__mosaic__item}>
-                                    <div className={styles['grid-box']}>
-                                        <img
-                                            src={box.icon}
-                                            alt={box.title}
-                                            className={styles['grid-box__icon']}
-                                        />
-                                        <Content tag="h3">{box.title}</Content>
-                                        <Content tag="p">{box.description}</Content>
+        <>
+            <section id={id} className={styles.empreendimento}>
+                <Container className={styles.empreendimento__container}>
+                    <div className={styles.empreendimento__grid}>
+                        <div className={styles.empreendimento__grid__text}>
+                            <Content id="empreendimento.title" tag="h1" />
+                            <div className={styles.empreendimento__grid__mosaic}>
+                                {mosaic.map((box, index) => (
+                                    <div
+                                        key={index}
+                                        className={styles.empreendimento__grid__mosaic__item}>
+                                        <Reveal
+                                            animation="bottom"
+                                            duration={1000}
+                                            delay={index * 100}
+                                            threshold={0.5}>
+                                            <div className={styles['grid-box']}>
+                                                <img
+                                                    src={box.icon}
+                                                    alt={box.title}
+                                                    className={styles['grid-box__icon']}
+                                                />
+                                                <Content tag="h3">{box.title}</Content>
+                                                <Content tag="p">{box.description}</Content>
+                                            </div>
+                                        </Reveal>
                                     </div>
-                                </div>
-                            ))}
-                            <div className={styles.empreendimento__grid__mosaic__item}>
-                                <div
-                                    className={clsx(
-                                        styles['grid-box'],
-                                        styles['grid-box--button']
-                                    )}>
-                                    <VscAdd className={styles['grid-box__icon']} />
-                                    <Content id="empreendimento.modalButton" tag="h3" />
+                                ))}
+                                <div className={styles.empreendimento__grid__mosaic__item}>
+                                    <Reveal animation="bottom" duration={1000} delay={400}>
+                                        <button
+                                            className={clsx(
+                                                styles['grid-box'],
+                                                styles['grid-box--button']
+                                            )}
+                                            onClick={() => setModalOpen(!isModalOpen)}>
+                                            <VscAdd className={styles['grid-box__icon']} />
+                                            <Content id="empreendimento.modalButton" tag="h3" />
+                                        </button>
+                                    </Reveal>
                                 </div>
                             </div>
                         </div>
+                        <Reveal duration={1000}>
+                            <div className={styles.empreendimento__grid__image}>
+                                <Image
+                                    src="/empreendimento.jpg"
+                                    width={826}
+                                    height={1064}
+                                    className={styles.cover__image}
+                                />
+                            </div>
+                        </Reveal>
                     </div>
-                    <div className={styles.empreendimento__grid__image}>
-                        <Image
-                            src="/empreendimento.jpg"
-                            width={826}
-                            height={1064}
-                            className={styles.cover__image}
-                        />
-                    </div>
+                </Container>
+            </section>
+            <Modal
+                isOpen={isModalOpen}
+                onClose={() => setModalOpen(!isModalOpen)}
+                title={content('empreendimento.modal.title')}>
+                <div className={styles.empreendimento__modal__container}>
+                    <ul>
+                        {modalContent.map((item, index) => (
+                            <li key={index}>
+                                <Content tag="strong">{item.title}</Content>
+                                <Content>{item.description}</Content>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
-            </Container>
-        </section>
+                <Image src="/modal-logos.png" width={429} height={62} />
+            </Modal>
+        </>
     );
 };
 

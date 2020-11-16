@@ -10,7 +10,7 @@ export const content = (prop: string): string => {
     const { content } = useContext(Context);
     let text = '';
     try {
-        text = content.content && resolve(prop, content.content);
+        text = content.content && resolve(prop, content.content as PageContentContentInterface);
     } catch (error) {
         throw new Error(`Couldn't find the text for ${prop}`);
     }

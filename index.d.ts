@@ -4,6 +4,10 @@ interface PageProps {
     content: PageContentContentInterface;
 }
 
+interface SectionProps {
+    id: string;
+}
+
 interface MosaicInterface {
     title: string;
     description: string;

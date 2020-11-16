@@ -10,18 +10,22 @@
 @keyframes fadeIn {
     0% {
         opacity: 0;
+        filter: blur(1rem);
     }
     100% {
         opacity: 1;
+        filter: blur(0);
     }
 }
 
 @keyframes fadeOut {
     0% {
-        opacity: 100;
+        opacity: 1;
+        filter: blur(0);
     }
     100% {
         opacity: 0;
+        filter: blur(1rem);
     }
 }
 
@@ -29,43 +33,24 @@
     0% {
         opacity: 0;
         transform: translateX(-10vw);
+        filter: blur(1rem);
     }
     100% {
         opacity: 1;
         transform: translateX(0);
+        filter: blur(0);
     }
 }
-
-@keyframes leftReverse {
-    0% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(-10vw);
-    }
-}
-
 @keyframes right {
     0% {
         opacity: 0;
         transform: translateX(10vw);
+        filter: blur(1rem);
     }
     100% {
         opacity: 1;
         transform: translateX(0);
-    }
-}
-
-@keyframes rightReverse {
-    0% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(10vw);
+        filter: blur(0);
     }
 }
 
@@ -73,21 +58,12 @@
     0% {
         opacity: 0;
         transform: translateY(-10vw);
+        filter: blur(1rem);
     }
     100% {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@keyframes topReverse {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-10vw);
+        filter: blur(0);
     }
 }
 
@@ -95,20 +71,11 @@
     0% {
         opacity: 0;
         transform: translateY(10vw);
+        filter: blur(1rem);
     }
     100% {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@keyframes bottomReverse {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(10vw);
+        filter: blur(0);
     }
 }

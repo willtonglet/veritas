@@ -1,20 +1,28 @@
+import React from 'react';
 import { content } from '@core/helpers/content';
 
 interface Props {
     id?: string;
-    tag?: keyof JSX.IntrinsicElements;
+    tag?: 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'label' | 'strong' | 'div';
     className?: string;
+    style?: React.CSSProperties;
+    children?: React.ReactNode;
 }
 
-const Content: React.FC<Props> = ({ id, tag: Component = 'span', className, children }) => {
-    return (
-        <Component
-            className={className}
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            //@ts-ignore
-            dangerouslySetInnerHTML={{ __html: children || content(id) }}
-        />
-    );
-};
+const Content = React.forwardRef<HTMLHeadingElement, Props>(
+    ({ id, tag: Component = 'span', className, children, style }, ref) => {
+        return (
+            <Component
+                ref={ref as React.LegacyRef<any>}
+                className={className}
+                style={style}
+                dangerouslySetInnerHTML={{
+                    __html: (children as string) || content(id as string)
+                }}
+            />
+        );
+    }
+);
 
+Content.displayName = 'Content';
 export default Content;
