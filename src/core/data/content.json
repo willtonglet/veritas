@@ -94,6 +94,9 @@
           }
         ]
       }
+    },
+    "perspectivas": {
+      "title": "Perspectivas"
     }
   }
 }

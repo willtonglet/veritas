@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Container from '@components/Container';
 import Content from '@components/Content';
-import styles from './styles.module.scss';
 import Reveal from '@components/Reveal';
+import styles from './styles.module.scss';
 
 const Cover: React.FC<SectionProps> = ({ id }) => {
     return (

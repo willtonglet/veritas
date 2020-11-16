@@ -1,5 +1,6 @@
 @import '@core/styles/mq';
 @import '@core/styles/variables';
+@import '@core/styles/animations';
 
 .header {
     width: 100vw;
@@ -53,6 +54,7 @@
 
     &__menu {
         display: none;
+        position: relative;
 
         @include lg {
             display: unset;
@@ -164,5 +166,18 @@
                 }
             }
         }
+    }
+}
+
+.progress {
+    width: 100%;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+
+    &__bar {
+        background-color: $primary;
+        height: 4px;
+        width: 0;
     }
 }

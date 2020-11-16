@@ -5,6 +5,7 @@ import Layout from '@components/Layout';
 import Cover from '@sections/cover';
 import Info from '@sections/info';
 import Empreendimento from '@sections/empreendimento';
+import Perspectivas from '@sections/perspectivas';
 
 import api from '@core/api';
 
@@ -14,6 +15,7 @@ const Home: NextPage<PageProps> = (props) => {
             <Cover id="inicio" />
             <Info />
             <Empreendimento id="empreendimento" />
+            <Perspectivas id="perspectivas" />
         </Layout>
     );
 };
