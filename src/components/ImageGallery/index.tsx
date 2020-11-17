@@ -14,6 +14,7 @@ import {
 import { content } from '@core/helpers/content';
 import Content from '@components/Content';
 import Reveal from '@components/Reveal';
+import Spinner from '@components/Spinner';
 import AppContext from 'context';
 
 import styles from './styles.module.scss';
@@ -27,6 +28,8 @@ const ImageGallery: React.FC = () => {
     const slides = (content('perspectivas.slides') as unknown) as SlidesInterface[];
     const slicedSlides = slides.slice(0 + currentVisible, 3 + currentVisible);
 
+    const spinner = <Spinner className={styles['image-gallery__spinner']} />;
+
     return (
         <div className={styles['image-gallery']}>
             <div className={styles['image-gallery__image']}>
@@ -38,11 +41,13 @@ const ImageGallery: React.FC = () => {
                                 styles['image-gallery__image__container--active']
                         )}
                         key={index}>
+                        {spinner}
                         <Image
                             src={slide.image.cover.url}
                             width={slide.image.cover.size.width}
                             height={slide.image.cover.size.height}
                             layout="responsive"
+                            loading="eager"
                         />
                         <div className={styles['image-gallery__legend-box']}>
                             <button
@@ -126,6 +131,7 @@ const ImageGallery: React.FC = () => {
                                         index === currentSlide &&
                                             styles['image-gallery__modal__container__image--active']
                                     )}>
+                                    {spinner}
                                     <Image
                                         src={slide.image.main.url}
                                         width={slide.image.main.size.width}
