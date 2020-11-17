@@ -96,7 +96,269 @@
       }
     },
     "perspectivas": {
-      "title": "Perspectivas"
+      "title": "Perspectivas",
+      "slides": [
+        {
+          "title": "Portaria",
+          "image": {
+            "main": {
+              "url": "/gallery/1.jpg",
+              "size": {
+                "width": 2000,
+                "height": 800
+              }
+            },
+            "cover": {
+              "url": "/gallery/1-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/1-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Lobby",
+          "image": {
+            "main": {
+              "url": "/gallery/2.jpg",
+              "size": {
+                "width": 2000,
+                "height": 908
+              }
+            },
+            "cover": {
+              "url": "/gallery/2-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/2-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Biblioteca",
+          "image": {
+            "main": {
+              "url": "/gallery/3.jpg",
+              "size": {
+                "width": 2000,
+                "height": 1290
+              }
+            },
+            "cover": {
+              "url": "/gallery/3-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/3-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Galeria",
+          "image": {
+            "main": {
+              "url": "/gallery/4.jpg",
+              "size": {
+                "width": 2000,
+                "height": 1538
+              }
+            },
+            "cover": {
+              "url": "/gallery/4-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/4-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Fitness",
+          "image": {
+            "main": {
+              "url": "/gallery/5.jpg",
+              "size": {
+                "width": 2500,
+                "height": 584
+              }
+            },
+            "cover": {
+              "url": "/gallery/5-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/5-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Salão de Festas",
+          "image": {
+            "main": {
+              "url": "/gallery/6.jpg",
+              "size": {
+                "width": 2114,
+                "height": 912
+              }
+            },
+            "cover": {
+              "url": "/gallery/6-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/6-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Piscina",
+          "image": {
+            "main": {
+              "url": "/gallery/7.jpg",
+              "size": {
+                "width": 2000,
+                "height": 1111
+              }
+            },
+            "cover": {
+              "url": "/gallery/7-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/7-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Playground",
+          "image": {
+            "main": {
+              "url": "/gallery/8.jpg",
+              "size": {
+                "width": 2500,
+                "height": 834
+              }
+            },
+            "cover": {
+              "url": "/gallery/8-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/8-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Lounge Externo",
+          "image": {
+            "main": {
+              "url": "/gallery/9.jpg",
+              "size": {
+                "width": 2000,
+                "height": 625
+              }
+            },
+            "cover": {
+              "url": "/gallery/9-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/9-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Espaço Gourmet",
+          "image": {
+            "main": {
+              "url": "/gallery/10.jpg",
+              "size": {
+                "width": 2500,
+                "height": 500
+              }
+            },
+            "cover": {
+              "url": "/gallery/10-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/10-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        }
+      ]
     }
   }
 }

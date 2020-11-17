@@ -17,3 +17,20 @@ interface MosaicInterface {
 interface PageContentContentInterface {
     [key: string]: string | PageContentContentInterface;
 }
+
+interface SlidesInterface {
+    title: string;
+    image: {
+        main: ImageProps;
+        cover: ImageProps;
+        thumb: ImageProps;
+    };
+}
+
+interface ImageProps {
+    url: string;
+    size: {
+        width: number;
+        height: number;
+    };
+}

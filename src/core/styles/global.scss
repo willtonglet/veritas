@@ -27,8 +27,12 @@ body {
     }
 }
 
-h1,
-h2 {
+button {
+    border: none;
+    cursor: pointer;
+}
+
+h1 {
     letter-spacing: 0.2rem;
     font-size: 26px;
     text-transform: uppercase;
@@ -55,6 +59,37 @@ h2 {
 
         @include lg {
             font-size: 38px;
+        }
+    }
+}
+
+h2 {
+    letter-spacing: 0.2rem;
+    font-size: 24px;
+    text-transform: uppercase;
+
+    @include sm {
+        letter-spacing: 0.3rem;
+        font-size: 28px;
+    }
+
+    @include lg {
+        letter-spacing: 0.4rem;
+        font-size: 36px;
+    }
+
+    * {
+        letter-spacing: 0.2rem;
+        font-size: 24px;
+        text-transform: uppercase;
+
+        @include sm {
+            letter-spacing: 0.3rem;
+            font-size: 28px;
+        }
+
+        @include lg {
+            font-size: 36px;
         }
     }
 }
