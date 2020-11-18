@@ -68,32 +68,40 @@ const ImageGallery: React.FC = () => {
                 ))}
             </div>
             <div className={styles['image-gallery__navigation']}>
-                {slicedSlides.map((slide, index) => (
-                    <div
-                        key={index}
-                        role="button"
-                        onClick={() => setCurrentSlide(index + currentVisible)}
-                        onKeyPress={() => setCurrentSlide(index + currentVisible)}
-                        className={clsx(
-                            styles['image-gallery__navigation__thumb'],
-                            currentSlide === index + currentVisible &&
-                                styles['image-gallery__navigation__thumb--active']
-                        )}
-                        tabIndex={index}>
-                        <div className={styles['image-gallery__navigation__thumb__image']}>
-                            <Image
-                                src={slide.image.thumb.url}
-                                width={slide.image.thumb.size.width}
-                                height={slide.image.thumb.size.height}
-                                layout="responsive"
-                                loading="eager"
-                            />
+                <div className={styles['image-gallery__navigation__images']}>
+                    {slicedSlides.map((slide, index) => (
+                        <div
+                            key={index}
+                            role="button"
+                            onClick={() => setCurrentSlide(index + currentVisible)}
+                            onKeyPress={() => setCurrentSlide(index + currentVisible)}
+                            className={clsx(
+                                styles['image-gallery__navigation__thumb'],
+                                currentSlide === index + currentVisible &&
+                                    styles['image-gallery__navigation__thumb--active']
+                            )}
+                            tabIndex={index}>
+                            <div className={styles['image-gallery__navigation__thumb__image']}>
+                                <Image
+                                    src={slide.image.thumb.url}
+                                    width={slide.image.thumb.size.width}
+                                    height={slide.image.thumb.size.height}
+                                    layout="responsive"
+                                    loading="eager"
+                                />
+                            </div>
+                            <Content
+                                tag="h6"
+                                className={clsx(
+                                    styles['image-gallery__navigation__thumb__text'],
+                                    currentSlide === index + currentVisible &&
+                                        styles['image-gallery__navigation__thumb__text--active']
+                                )}>
+                                {slide.title}
+                            </Content>
                         </div>
-                        <Content tag="h6" className={styles['image-gallery__navigation__text']}>
-                            {slide.title}
-                        </Content>
-                    </div>
-                ))}
+                    ))}
+                </div>
 
                 <div className={styles['image-gallery__navigation__control']}>
                     <button

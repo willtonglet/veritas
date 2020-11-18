@@ -4,7 +4,12 @@
 .empreendimento {
     display: flex;
     justify-content: center;
-    padding: 5rem 0;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+
+    @include sm {
+        padding-bottom: 5rem;
+    }
 
     &__container {
         display: flex;
@@ -29,15 +34,13 @@
                 grid-column-start: 1;
                 grid-column-end: 12;
                 align-items: unset;
-                padding-left: 2rem;
             }
 
             @include lg {
-                padding-left: unset;
                 grid-column-end: 10;
             }
 
-            h1 {
+            h2 {
                 margin-bottom: 2rem;
                 text-align: center;
 
@@ -62,7 +65,7 @@
             }
 
             &__item {
-                margin: 0 0.25rem 0.5rem;
+                margin: 0 0.1rem 0.2rem;
 
                 @include lg {
                     margin: 0 0.5rem 0.5rem 0;
@@ -129,12 +132,18 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
 
     @include lg {
         width: 240px;
         height: 240px;
         padding: 2rem 1.5rem;
+    }
+
+    @include xl {
+        width: 260px;
+        height: 260px;
     }
 
     &--button {

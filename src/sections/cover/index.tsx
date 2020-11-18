@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Container from '@components/Container';
 import Content from '@components/Content';
-import Reveal from '@components/Reveal';
 import styles from './styles.module.scss';
 
 const Cover: React.FC<SectionProps> = ({ id }) => {
@@ -15,11 +14,9 @@ const Cover: React.FC<SectionProps> = ({ id }) => {
                     className={styles.cover__image}
                     loading="eager"
                 />
-                <Reveal animation="top" duration={1000}>
-                    <div className={styles.cover__box}>
-                        <Content id="cover.title" tag="h1" />
-                    </div>
-                </Reveal>
+                <div className={styles.cover__box}>
+                    <Content id="cover.title" tag="h1" />
+                </div>
             </Container>
         </section>
     );

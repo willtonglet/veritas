@@ -36,7 +36,9 @@
             transition: 0.25s ease-in-out;
 
             &.scroll {
-                width: 180px;
+                @include lg {
+                    width: 180px;
+                }
             }
         }
     }

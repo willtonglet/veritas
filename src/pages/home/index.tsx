@@ -1,11 +1,14 @@
 import { NextPage } from 'next';
-import React from 'react';
+import dynamic from 'next/dynamic';
 
 import Layout from '@components/Layout';
 import Cover from '@sections/cover';
 import Info from '@sections/info';
 import Empreendimento from '@sections/empreendimento';
-import Perspectivas from '@sections/perspectivas';
+
+const Perspectivas = dynamic(() => import('@sections/perspectivas'), {
+    ssr: false
+});
 
 import api from '@core/api';
 

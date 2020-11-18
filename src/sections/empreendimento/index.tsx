@@ -25,7 +25,7 @@ const Empreendimento: React.FC<SectionProps> = ({ id }) => {
                 <Container className={styles.empreendimento__container}>
                     <div className={styles.empreendimento__grid}>
                         <div className={styles.empreendimento__grid__text}>
-                            <Content id="empreendimento.title" tag="h1" />
+                            <Content id="empreendimento.title" tag="h2" />
                             <div className={styles.empreendimento__grid__mosaic}>
                                 {mosaic.map((box, index) => (
                                     <div
@@ -33,7 +33,7 @@ const Empreendimento: React.FC<SectionProps> = ({ id }) => {
                                         className={styles.empreendimento__grid__mosaic__item}>
                                         <Reveal
                                             animation="bottom"
-                                            duration={1000}
+                                            duration={500}
                                             delay={index * 100}
                                             threshold={0.5}>
                                             <div className={styles['grid-box']}>
@@ -49,7 +49,11 @@ const Empreendimento: React.FC<SectionProps> = ({ id }) => {
                                     </div>
                                 ))}
                                 <div className={styles.empreendimento__grid__mosaic__item}>
-                                    <Reveal animation="bottom" duration={1000} delay={400}>
+                                    <Reveal
+                                        animation="bottom"
+                                        duration={500}
+                                        delay={400}
+                                        threshold={0.5}>
                                         <button
                                             className={clsx(
                                                 styles['grid-box'],
@@ -63,16 +67,14 @@ const Empreendimento: React.FC<SectionProps> = ({ id }) => {
                                 </div>
                             </div>
                         </div>
-                        <Reveal duration={1000}>
-                            <div className={styles.empreendimento__grid__image}>
-                                <Image
-                                    src="/empreendimento.jpg"
-                                    width={826}
-                                    height={1064}
-                                    className={styles.cover__image}
-                                />
-                            </div>
-                        </Reveal>
+                        <div className={styles.empreendimento__grid__image}>
+                            <Image
+                                src="/empreendimento.jpg"
+                                width={826}
+                                height={1064}
+                                className={styles.cover__image}
+                            />
+                        </div>
                     </div>
                 </Container>
             </section>

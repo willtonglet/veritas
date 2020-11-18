@@ -1,8 +1,12 @@
 @import '@core/styles/mq';
 
 .container {
+    padding: 0 2rem;
+    width: 100vw;
+
     @include lg {
         width: 1280px;
+        padding: unset;
     }
 
     @include xl {

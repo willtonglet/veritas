@@ -333,7 +333,7 @@
           }
         },
         {
-          "title": "Espaço Gourmet",
+          "title": "Terraço Gourmet",
           "image": {
             "main": {
               "url": "/gallery/10.jpg",
@@ -351,6 +351,84 @@
             },
             "thumb": {
               "url": "/gallery/10-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Espaço Gourmet",
+          "image": {
+            "main": {
+              "url": "/gallery/11.jpg",
+              "size": {
+                "width": 3200,
+                "height": 517
+              }
+            },
+            "cover": {
+              "url": "/gallery/11-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/11-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Salão de Jogos",
+          "image": {
+            "main": {
+              "url": "/gallery/12.jpg",
+              "size": {
+                "width": 2000,
+                "height": 784
+              }
+            },
+            "cover": {
+              "url": "/gallery/12-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/12-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Espaço Kids",
+          "image": {
+            "main": {
+              "url": "/gallery/13.jpg",
+              "size": {
+                "width": 2000,
+                "height": 1333
+              }
+            },
+            "cover": {
+              "url": "/gallery/13-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/13-thumb.jpg",
               "size": {
                 "width": 163,
                 "height": 100
