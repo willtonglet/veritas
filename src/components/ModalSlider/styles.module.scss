@@ -13,6 +13,10 @@
     display: flex;
     flex-direction: column;
 
+    &--light {
+        background-color: $primaryLight;
+    }
+
     &__text {
         background-color: $secondary;
         padding: 1rem 2rem;
@@ -70,7 +74,7 @@
         left: 0;
         display: flex;
 
-        button {
+        &__button {
             background-color: transparent;
             padding: 0 1rem;
             line-height: 0;
@@ -100,6 +104,12 @@
                 font-size: 32px;
                 color: $primaryLight;
                 transition: 0.25s ease-in-out;
+            }
+
+            &--light {
+                * {
+                    color: $primary;
+                }
             }
         }
     }

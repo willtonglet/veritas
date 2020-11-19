@@ -437,6 +437,64 @@
           }
         }
       ]
+    },
+    "plantas": {
+      "slides": [
+        {
+          "title": "163<span>m²</span>",
+          "amount": "40 unidades",
+          "items": [
+            "4 dorms.",
+            "2 suites",
+            "2 vagas"
+          ],
+          "image": {
+            "main": {
+              "url": "/spaces/1.png",
+              "size": {
+                "width": 890,
+                "height": 571
+              }
+            }
+          }
+        },
+        {
+          "title": "163<span>m²</span>",
+          "amount": "40 unidades",
+          "items": [
+            "4 dorms.",
+            "2 suites",
+            "2 vagas"
+          ],
+          "image": {
+            "main": {
+              "url": "/spaces/1.png",
+              "size": {
+                "width": 890,
+                "height": 571
+              }
+            }
+          }
+        },
+        {
+          "title": "163<span>m²</span>",
+          "amount": "40 unidades",
+          "items": [
+            "4 dorms.",
+            "2 suites",
+            "2 vagas"
+          ],
+          "image": {
+            "main": {
+              "url": "/spaces/1.png",
+              "size": {
+                "width": 890,
+                "height": 571
+              }
+            }
+          }
+        }
+      ]
     }
   }
 }

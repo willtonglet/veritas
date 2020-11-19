@@ -16,6 +16,7 @@ interface Props {
     currentSlide: number;
     setCurrentSlide: Dispatch<SetStateAction<number>>;
     onClose: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+    isLightMode?: boolean;
 }
 
 const ModalSlider: React.FC<Props> = ({
@@ -23,7 +24,8 @@ const ModalSlider: React.FC<Props> = ({
     slides,
     currentSlide,
     setCurrentSlide,
-    onClose
+    onClose,
+    isLightMode = false
 }) => {
     const { setScrollBlocked } = useContext(AppContext);
 
@@ -33,7 +35,11 @@ const ModalSlider: React.FC<Props> = ({
         <>
             {isOpen && (
                 <Reveal animation="top" duration={1000}>
-                    <div className={styles['modal-slider']}>
+                    <div
+                        className={clsx(
+                            styles['modal-slider'],
+                            isLightMode && styles['modal-slider--light']
+                        )}>
                         <button
                             onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
                                 setScrollBlocked(false);
@@ -64,11 +70,19 @@ const ModalSlider: React.FC<Props> = ({
 
                         <div className={styles['modal-slider__footer']}>
                             <button
+                                className={clsx(
+                                    styles['modal-slider__footer__button'],
+                                    isLightMode && styles['modal-slider__footer__button--light']
+                                )}
                                 disabled={currentSlide === 0}
                                 onClick={() => setCurrentSlide(currentSlide - 1)}>
                                 <VscChevronLeft />
                             </button>
                             <button
+                                className={clsx(
+                                    styles['modal-slider__footer__button'],
+                                    isLightMode && styles['modal-slider__footer__button--light']
+                                )}
                                 disabled={currentSlide === slides.length - 1}
                                 onClick={() => setCurrentSlide(currentSlide + 1)}>
                                 <VscChevronRight />

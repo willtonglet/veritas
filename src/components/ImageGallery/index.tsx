@@ -9,6 +9,7 @@ import Content from '@components/Content';
 import Reveal from '@components/Reveal';
 import Spinner from '@components/Spinner';
 import ModalSlider from '@components/ModalSlider';
+import ButtonIcon from '@components/ButtonIcon';
 
 import styles from './styles.module.scss';
 
@@ -46,11 +47,11 @@ const ImageGallery: React.FC<Props> = ({ slides }) => {
                         />
                         <Reveal animation="left" duration={500}>
                             <div className={styles['image-gallery__legend-box']}>
-                                <button
+                                <ButtonIcon
                                     onClick={() => setModalOpen(true)}
                                     className={styles['image-gallery__legend-box__maximize']}>
                                     <IoIosExpand />
-                                </button>
+                                </ButtonIcon>
                                 <Content
                                     tag="h4"
                                     className={styles['image-gallery__legend-box__label']}>

@@ -6,6 +6,7 @@ import { IoIosExpand } from 'react-icons/io';
 import ModalSlider from '@components/ModalSlider';
 import Content from '@components/Content';
 import Reveal from '@components/Reveal';
+import ButtonIcon from '@components/ButtonIcon';
 
 import styles from './styles.module.scss';
 
@@ -20,44 +21,78 @@ const ImageSlider: React.FC<Props> = ({ slides }) => {
     return (
         <>
             <div className={styles['image-slider']}>
-                <Reveal animation="left" duration={500} threshold={0.7}>
+                <Reveal animation="left" duration={500} threshold={0.5}>
                     <div className={styles['image-slider__navigation']}>
-                        <div className={styles['image-slider__slide__title']}>
-                            <Content tag="h2">{'163<span>m2</span>'}</Content>
-                            <Content tag="h3">40 Unidades</Content>
-                            <ul>
-                                <li>4 dorms.</li>
-                                <li>4 dorms.</li>
-                                <li>4 dorms.</li>
-                            </ul>
-                        </div>
+                        {slides.map(
+                            (slide, index) =>
+                                index === currentSlide && (
+                                    <div
+                                        key={`slide-${index}`}
+                                        className={styles['image-slider__slide__text']}>
+                                        <Reveal animation="fadeIn" duration={400}>
+                                            <Content tag="h2">{slide.title}</Content>
+                                        </Reveal>
+                                        <Reveal animation="right" duration={400}>
+                                            <Content tag="h3">{slide.amount}</Content>
+                                        </Reveal>
+                                        <Reveal animation="fadeIn" duration={400}>
+                                            <ul>
+                                                {slide.items.map((item, index) => (
+                                                    <li key={`item-${index}`}>{item}</li>
+                                                ))}
+                                            </ul>
+                                        </Reveal>
+                                    </div>
+                                )
+                        )}
                         <div className={styles['image-slider__controls']}>
-                            <button>
+                            <ButtonIcon
+                                isDisabled={currentSlide === 0}
+                                onClick={() => setCurrentSlide(currentSlide - 1)}
+                                hasNoPadding>
                                 <VscChevronLeft />
-                            </button>
-                            <button>
+                            </ButtonIcon>
+                            <ButtonIcon
+                                isDisabled={currentSlide === slides.length - 1}
+                                onClick={() => setCurrentSlide(currentSlide + 1)}
+                                hasNoPadding>
                                 <VscChevronRight />
-                            </button>
+                            </ButtonIcon>
                         </div>
                     </div>
                 </Reveal>
-                <Reveal animation="fadeIn" duration={500} threshold={0.7}>
+                <Reveal animation="fadeIn" duration={500} threshold={0.5}>
                     <div className={styles['image-slider__images']}>
-                        <button className={styles['image-slider__images__maximize']}>
+                        <ButtonIcon
+                            onClick={() => setModalOpen(true)}
+                            className={styles['image-slider__images__maximize']}>
                             <IoIosExpand />
-                        </button>
-                        <Image
-                            src="/spaces/1.png"
-                            width={890}
-                            height={571}
-                            layout="responsive"
-                            loading="eager"
-                        />
+                        </ButtonIcon>
+                        {slides.map(
+                            (slide, index) =>
+                                index === currentSlide && (
+                                    <Reveal
+                                        key={`image-${index}`}
+                                        animation="fadeIn"
+                                        duration={600}>
+                                        <div>
+                                            <Image
+                                                src={slide.image.main.url}
+                                                width={slide.image.main.size.width}
+                                                height={slide.image.main.size.height}
+                                                layout="responsive"
+                                                loading="eager"
+                                            />
+                                        </div>
+                                    </Reveal>
+                                )
+                        )}
                     </div>
                 </Reveal>
             </div>
 
             <ModalSlider
+                isLightMode
                 isOpen={isModalOpen}
                 currentSlide={currentSlide}
                 setCurrentSlide={setCurrentSlide}
