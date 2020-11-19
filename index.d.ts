@@ -5,7 +5,7 @@ interface PageProps {
 }
 
 interface SectionProps {
-    id: string;
+    id?: string;
 }
 
 interface MosaicInterface {
@@ -27,6 +27,10 @@ interface SlidesInterface {
     };
 }
 
+interface SpacesInterface extends SlidesInterface {
+    amount: string;
+    items: Array<string>;
+}
 interface ImageProps {
     url: string;
     size: {

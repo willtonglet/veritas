@@ -29,7 +29,8 @@
         overflow-y: auto;
 
         @include md {
-            height: 80vh;
+            height: auto;
+            max-height: 90vh;
         }
     }
 

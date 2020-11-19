@@ -32,7 +32,7 @@ const Empreendimento: React.FC<SectionProps> = ({ id }) => {
                                         key={index}
                                         className={styles.empreendimento__grid__mosaic__item}>
                                         <Reveal
-                                            animation="bottom"
+                                            animation="top"
                                             duration={500}
                                             delay={index * 100}
                                             threshold={0.5}>
@@ -50,7 +50,7 @@ const Empreendimento: React.FC<SectionProps> = ({ id }) => {
                                 ))}
                                 <div className={styles.empreendimento__grid__mosaic__item}>
                                     <Reveal
-                                        animation="bottom"
+                                        animation="top"
                                         duration={500}
                                         delay={400}
                                         threshold={0.5}>

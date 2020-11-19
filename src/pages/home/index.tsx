@@ -1,16 +1,17 @@
 import { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 
+import api from '@core/api';
+
 import Layout from '@components/Layout';
 import Cover from '@sections/cover';
 import Info from '@sections/info';
 import Empreendimento from '@sections/empreendimento';
+import Plantas from '@sections/plantas';
 
 const Perspectivas = dynamic(() => import('@sections/perspectivas'), {
     ssr: false
 });
-
-import api from '@core/api';
 
 const Home: NextPage<PageProps> = (props) => {
     return (
@@ -19,6 +20,7 @@ const Home: NextPage<PageProps> = (props) => {
             <Info />
             <Empreendimento id="empreendimento" />
             <Perspectivas id="perspectivas" />
+            <Plantas />
         </Layout>
     );
 };

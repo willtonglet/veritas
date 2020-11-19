@@ -1,31 +1,26 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
 
 import { IoIosExpand } from 'react-icons/io';
-import {
-    VscChevronUp,
-    VscChevronDown,
-    VscClose,
-    VscChevronLeft,
-    VscChevronRight
-} from 'react-icons/vsc';
+import { VscChevronUp, VscChevronDown } from 'react-icons/vsc';
 
-import { content } from '@core/helpers/content';
 import Content from '@components/Content';
 import Reveal from '@components/Reveal';
 import Spinner from '@components/Spinner';
-import AppContext from 'context';
+import ModalSlider from '@components/ModalSlider';
 
 import styles from './styles.module.scss';
 
-const ImageGallery: React.FC = () => {
+interface Props {
+    slides: Array<SlidesInterface>;
+}
+
+const ImageGallery: React.FC<Props> = ({ slides }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [currentVisible, setCurrentVisible] = useState(0);
     const [isModalOpen, setModalOpen] = useState(false);
-    const { setScrollBlocked } = useContext(AppContext);
 
-    const slides = (content('perspectivas.slides') as unknown) as SlidesInterface[];
     const slicedSlides = slides.slice(0 + currentVisible, 3 + currentVisible);
 
     const spinner = <Spinner className={styles['image-gallery__spinner']} />;
@@ -49,21 +44,20 @@ const ImageGallery: React.FC = () => {
                             layout="responsive"
                             loading="eager"
                         />
-                        <div className={styles['image-gallery__legend-box']}>
-                            <button
-                                onClick={() => {
-                                    setModalOpen(true);
-                                    setScrollBlocked(true);
-                                }}
-                                className={styles['image-gallery__legend-box__maximize']}>
-                                <IoIosExpand />
-                            </button>
-                            <Content
-                                tag="h4"
-                                className={styles['image-gallery__legend-box__label']}>
-                                {slide.title}
-                            </Content>
-                        </div>
+                        <Reveal animation="left" duration={500}>
+                            <div className={styles['image-gallery__legend-box']}>
+                                <button
+                                    onClick={() => setModalOpen(true)}
+                                    className={styles['image-gallery__legend-box__maximize']}>
+                                    <IoIosExpand />
+                                </button>
+                                <Content
+                                    tag="h4"
+                                    className={styles['image-gallery__legend-box__label']}>
+                                    {slide.title}
+                                </Content>
+                            </div>
+                        </Reveal>
                     </div>
                 ))}
             </div>
@@ -118,55 +112,13 @@ const ImageGallery: React.FC = () => {
                     </button>
                 </div>
             </div>
-            {isModalOpen && (
-                <Reveal animation="top" duration={1000}>
-                    <div className={styles['image-gallery__modal']}>
-                        <button
-                            onClick={() => {
-                                setModalOpen(false);
-                                setScrollBlocked(false);
-                            }}
-                            className={styles['image-gallery__modal__close']}>
-                            <VscClose />
-                        </button>
-
-                        <div className={styles['image-gallery__modal__container']}>
-                            {slides.map((slide, index) => (
-                                <div
-                                    key={index}
-                                    className={clsx(
-                                        styles['image-gallery__modal__container__image'],
-                                        index === currentSlide &&
-                                            styles['image-gallery__modal__container__image--active']
-                                    )}>
-                                    {spinner}
-                                    <Image
-                                        src={slide.image.main.url}
-                                        width={slide.image.main.size.width}
-                                        height={slide.image.main.size.height}
-                                    />
-                                </div>
-                            ))}
-                        </div>
-
-                        <div className={styles['image-gallery__modal__footer']}>
-                            <button
-                                disabled={currentSlide === 0}
-                                onClick={() => setCurrentSlide(currentSlide - 1)}>
-                                <VscChevronLeft />
-                            </button>
-                            <button
-                                disabled={currentSlide === slides.length - 1}
-                                onClick={() => setCurrentSlide(currentSlide + 1)}>
-                                <VscChevronRight />
-                            </button>
-                            <Content tag="h6" className={styles['image-gallery__modal__text']}>
-                                {slides[currentSlide].title}
-                            </Content>
-                        </div>
-                    </div>
-                </Reveal>
-            )}
+            <ModalSlider
+                isOpen={isModalOpen}
+                currentSlide={currentSlide}
+                setCurrentSlide={setCurrentSlide}
+                slides={slides}
+                onClose={() => setModalOpen(false)}
+            />
         </div>
     );
 };
