@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import { IoIosExpand } from 'react-icons/io';
 
@@ -5,10 +6,9 @@ import Container from '@components/Container';
 import Content from '@components/Content';
 import Reveal from '@components/Reveal';
 import Modal from '@components/Modal';
+import { content } from '@core/helpers/content';
 
 import styles from './styles.module.scss';
-import { content } from '@core/helpers/content';
-import { useState } from 'react';
 
 const Localizacao: React.FC<SectionProps> = ({ id }) => {
     const [isModalOpen, setModalOpen] = useState(false);

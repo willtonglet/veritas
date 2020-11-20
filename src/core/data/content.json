@@ -599,6 +599,23 @@
           ]
         }
       ]
+    },
+    "mapa": {
+      "title": "7 min",
+      "legend": "A PÉ DO METRÔ  SUMARÉ",
+      "streets": [
+        "AV. SUMARÉ",
+        "AV. DR. ARNALDO",
+        "R. HEITOR PENTEADO",
+        "R. OSCAR FREIRE"
+      ],
+      "image": {
+        "url": "/mapa.png",
+        "size": {
+          "width": 1088,
+          "height": 576
+        }
+      }
     }
   }
 }

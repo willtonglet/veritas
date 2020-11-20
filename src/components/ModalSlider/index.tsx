@@ -34,70 +34,68 @@ const ModalSlider: React.FC<Props> = ({
     return (
         <>
             {isOpen && (
-                <Reveal animation="top" duration={500}>
-                    <div
-                        className={clsx(
-                            styles['modal-slider'],
-                            isLightMode && styles['modal-slider--light']
-                        )}>
-                        <button
-                            onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-                                setScrollBlocked(false);
-                                onClose(e);
-                            }}
-                            className={styles['modal-slider__close']}>
-                            <VscClose />
-                        </button>
+                <div
+                    className={clsx(
+                        styles['modal-slider'],
+                        isLightMode && styles['modal-slider--light']
+                    )}>
+                    <button
+                        onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+                            setScrollBlocked(false);
+                            onClose(e);
+                        }}
+                        className={styles['modal-slider__close']}>
+                        <VscClose />
+                    </button>
 
-                        <div className={styles['modal-slider__container']}>
-                            {slides.map((slide, index) => (
-                                <div
-                                    key={index}
+                    <div className={styles['modal-slider__container']}>
+                        {slides.map((slide, index) => (
+                            <div
+                                key={index}
+                                className={clsx(
+                                    styles['modal-slider__container__image'],
+                                    index === currentSlide &&
+                                        styles['modal-slider__container__image--active']
+                                )}>
+                                <Spinner
                                     className={clsx(
-                                        styles['modal-slider__container__image'],
-                                        index === currentSlide &&
-                                            styles['modal-slider__container__image--active']
-                                    )}>
-                                    <Spinner
-                                        className={clsx(
-                                            styles['modal-slider__spinner'],
-                                            isLightMode && styles['modal-slider__spinner--light']
-                                        )}
-                                    />
-                                    <Image
-                                        src={slide.image.main.url}
-                                        width={slide.image.main.size.width}
-                                        height={slide.image.main.size.height}
-                                    />
-                                </div>
-                            ))}
-                        </div>
-
-                        <div className={styles['modal-slider__footer']}>
-                            <button
-                                className={clsx(
-                                    styles['modal-slider__footer__button'],
-                                    isLightMode && styles['modal-slider__footer__button--light']
-                                )}
-                                disabled={currentSlide === 0}
-                                onClick={() => setCurrentSlide(currentSlide - 1)}>
-                                <VscChevronLeft />
-                            </button>
-                            <button
-                                className={clsx(
-                                    styles['modal-slider__footer__button'],
-                                    isLightMode && styles['modal-slider__footer__button--light']
-                                )}
-                                disabled={currentSlide === slides.length - 1}
-                                onClick={() => setCurrentSlide(currentSlide + 1)}>
-                                <VscChevronRight />
-                            </button>
-                            <Content tag="h6" className={styles['modal-slider__text']}>
-                                {slides[currentSlide].title}
-                            </Content>
-                        </div>
+                                        styles['modal-slider__spinner'],
+                                        isLightMode && styles['modal-slider__spinner--light']
+                                    )}
+                                />
+                                <Image
+                                    src={slide.image.main.url}
+                                    width={slide.image.main.size.width}
+                                    height={slide.image.main.size.height}
+                                />
+                            </div>
+                        ))}
                     </div>
-                </Reveal>
+
+                    <div className={styles['modal-slider__footer']}>
+                        <button
+                            className={clsx(
+                                styles['modal-slider__footer__button'],
+                                isLightMode && styles['modal-slider__footer__button--light']
+                            )}
+                            disabled={currentSlide === 0}
+                            onClick={() => setCurrentSlide(currentSlide - 1)}>
+                            <VscChevronLeft />
+                        </button>
+                        <button
+                            className={clsx(
+                                styles['modal-slider__footer__button'],
+                                isLightMode && styles['modal-slider__footer__button--light']
+                            )}
+                            disabled={currentSlide === slides.length - 1}
+                            onClick={() => setCurrentSlide(currentSlide + 1)}>
+                            <VscChevronRight />
+                        </button>
+                        <Content tag="h6" className={styles['modal-slider__text']}>
+                            {slides[currentSlide].title}
+                        </Content>
+                    </div>
+                </div>
             )}
         </>
     );

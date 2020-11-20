@@ -106,11 +106,11 @@
             columns: 1;
             column-gap: 1.5rem;
 
-            @include sm {
+            @include md {
                 columns: 2;
             }
 
-            @include md {
+            @include lg {
                 columns: 3;
             }
         }

@@ -19,6 +19,7 @@
         max-width: 960px;
         z-index: 2;
         position: relative;
+        animation: top 0.5s ease-in-out forwards;
 
         &--isFullScreen {
             width: 100vw;

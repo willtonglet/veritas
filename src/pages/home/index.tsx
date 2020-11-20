@@ -17,6 +17,14 @@ const Localizacao = dynamic(() => import('@sections/localizacao'), {
     ssr: false
 });
 
+const LocalizacaoMapa = dynamic(() => import('@sections/localizacao-mapa'), {
+    ssr: false
+});
+
+const Video = dynamic(() => import('@sections/video'), {
+    ssr: false
+});
+
 const Home: NextPage<PageProps> = (props) => {
     return (
         <Layout {...props}>
@@ -26,6 +34,8 @@ const Home: NextPage<PageProps> = (props) => {
             <Perspectivas id="perspectivas" />
             <Plantas />
             <Localizacao />
+            <LocalizacaoMapa />
+            <Video />
         </Layout>
     );
 };

@@ -21,6 +21,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        z-index: 2;
 
         @include md {
             grid-column-start: 1;
@@ -80,6 +81,10 @@
             height: 560px;
         }
 
+        @include xl {
+            height: 600px;
+        }
+
         &__maximize {
             position: absolute;
             top: 0;
@@ -89,12 +94,6 @@
 
     &__slide {
         &__text {
-            text-align: center;
-
-            @include md {
-                text-align: unset;
-            }
-
             h4 {
                 font-size: 1.3rem;
                 color: $secondary;
@@ -121,13 +120,8 @@
                 padding: 0.5rem 1.5rem;
                 margin-bottom: 2rem;
                 display: flex;
-                justify-content: center;
-
-                @include md {
-                    margin-left: -1.5rem;
-                    margin-right: -4rem;
-                    justify-content: unset;
-                }
+                margin-left: -1.5rem;
+                margin-right: -4rem;
             }
 
             li {

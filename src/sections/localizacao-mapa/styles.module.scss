@@ -1,0 +1,77 @@
+@import '@core/styles/mq';
+@import '@core/styles/variables';
+
+.mapa {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0 0;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+    }
+
+    &__text {
+        grid-column-start: 1;
+        grid-column-end: 17;
+        grid-row-start: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+
+        @include md {
+            grid-row-start: 1;
+            grid-column-end: 6;
+        }
+    }
+
+    &__image {
+        grid-column-start: 1;
+        grid-column-end: 17;
+        grid-row-start: 1;
+
+        @include md {
+            grid-column-start: 5;
+        }
+    }
+
+    &__box {
+        background-color: $primary;
+        padding: 5rem 0 5rem 4rem;
+
+        @include md {
+            text-align: unset;
+        }
+
+        h2 {
+            font-size: 4.5rem;
+            color: $secondary;
+            margin-bottom: 0.5rem;
+            text-transform: none;
+            letter-spacing: unset;
+        }
+
+        h3 {
+            background-color: $secondary;
+            color: $primary;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            padding: 0.5rem 1.5rem;
+            margin-left: -1.5rem;
+            margin-right: -1rem;
+            margin-bottom: 2rem;
+            display: flex;
+        }
+
+        li {
+            color: $primaryLight;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+
+            span {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

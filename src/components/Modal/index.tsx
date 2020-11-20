@@ -2,7 +2,6 @@ import { useEffect, useRef, useContext } from 'react';
 import clsx from 'clsx';
 import { VscClose } from 'react-icons/vsc';
 
-import Reveal from '@components/Reveal';
 import Content from '@components/Content';
 import AppContext from 'context';
 
@@ -39,32 +38,30 @@ const Modal: React.FC<Props> = ({
         <>
             {isOpen && (
                 <div className={styles.modal}>
-                    <Reveal animation="top" duration={700}>
+                    <div
+                        className={clsx(
+                            styles.modal__wrapper,
+                            isFullScreen && styles['modal__wrapper--isFullScreen']
+                        )}
+                        ref={modalRef}>
                         <div
                             className={clsx(
-                                styles.modal__wrapper,
-                                isFullScreen && styles['modal__wrapper--isFullScreen']
+                                styles.modal__container,
+                                isFullScreen && styles['modal__container--isFullScreen']
                             )}
                             ref={modalRef}>
-                            <div
-                                className={clsx(
-                                    styles.modal__container,
-                                    isFullScreen && styles['modal__container--isFullScreen']
-                                )}
-                                ref={modalRef}>
-                                <button onClick={onClose} className={styles.modal__close}>
-                                    <VscClose />
-                                </button>
-                                {title && (
-                                    <Content tag="h3" className={styles.modal__title}>
-                                        {title}
-                                    </Content>
-                                )}
+                            <button onClick={onClose} className={styles.modal__close}>
+                                <VscClose />
+                            </button>
+                            {title && (
+                                <Content tag="h3" className={styles.modal__title}>
+                                    {title}
+                                </Content>
+                            )}
 
-                                {children}
-                            </div>
+                            {children}
                         </div>
-                    </Reveal>
+                    </div>
                 </div>
             )}
         </>
