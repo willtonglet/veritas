@@ -31,11 +31,7 @@ const Empreendimento: React.FC<SectionProps> = ({ id }) => {
                                     <div
                                         key={index}
                                         className={styles.empreendimento__grid__mosaic__item}>
-                                        <Reveal
-                                            animation="top"
-                                            duration={500}
-                                            delay={index * 100}
-                                            threshold={0.5}>
+                                        <Reveal animation="top" duration={500} delay={index * 100}>
                                             <div className={styles['grid-box']}>
                                                 <img
                                                     src={box.icon}
@@ -49,11 +45,7 @@ const Empreendimento: React.FC<SectionProps> = ({ id }) => {
                                     </div>
                                 ))}
                                 <div className={styles.empreendimento__grid__mosaic__item}>
-                                    <Reveal
-                                        animation="top"
-                                        duration={500}
-                                        delay={400}
-                                        threshold={0.5}>
+                                    <Reveal animation="top" duration={500} delay={400}>
                                         <button
                                             className={clsx(
                                                 styles['grid-box'],

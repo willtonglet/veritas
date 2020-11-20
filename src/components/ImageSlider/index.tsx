@@ -21,7 +21,7 @@ const ImageSlider: React.FC<Props> = ({ slides }) => {
     return (
         <>
             <div className={styles['image-slider']}>
-                <Reveal animation="left" duration={500} threshold={0.5}>
+                <Reveal animation="left" duration={500}>
                     <div className={styles['image-slider__navigation']}>
                         {slides.map(
                             (slide, index) =>
@@ -30,7 +30,10 @@ const ImageSlider: React.FC<Props> = ({ slides }) => {
                                         key={`slide-${index}`}
                                         className={styles['image-slider__slide__text']}>
                                         <Reveal animation="fadeIn" duration={400}>
-                                            <Content tag="h2">{slide.title}</Content>
+                                            <Content tag="h4">{slide.title}</Content>
+                                        </Reveal>
+                                        <Reveal animation="fadeIn" duration={400}>
+                                            <Content tag="h2">{slide.size}</Content>
                                         </Reveal>
                                         <Reveal animation="right" duration={400}>
                                             <Content tag="h3">{slide.amount}</Content>
@@ -61,7 +64,7 @@ const ImageSlider: React.FC<Props> = ({ slides }) => {
                         </div>
                     </div>
                 </Reveal>
-                <Reveal animation="fadeIn" duration={500} threshold={0.5}>
+                <Reveal animation="fadeIn" duration={500}>
                     <div className={styles['image-slider__images']}>
                         <ButtonIcon
                             onClick={() => setModalOpen(true)}

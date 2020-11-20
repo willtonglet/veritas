@@ -13,6 +13,10 @@ const Perspectivas = dynamic(() => import('@sections/perspectivas'), {
     ssr: false
 });
 
+const Localizacao = dynamic(() => import('@sections/localizacao'), {
+    ssr: false
+});
+
 const Home: NextPage<PageProps> = (props) => {
     return (
         <Layout {...props}>
@@ -21,6 +25,7 @@ const Home: NextPage<PageProps> = (props) => {
             <Empreendimento id="empreendimento" />
             <Perspectivas id="perspectivas" />
             <Plantas />
+            <Localizacao />
         </Layout>
     );
 };

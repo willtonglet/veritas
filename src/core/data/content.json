@@ -441,7 +441,8 @@
     "plantas": {
       "slides": [
         {
-          "title": "163<span>m²</span>",
+          "title": "Planta Humanizada",
+          "size": "163<span>m²</span>",
           "amount": "40 unidades",
           "items": [
             "4 dorms.",
@@ -459,40 +460,143 @@
           }
         },
         {
-          "title": "163<span>m²</span>",
-          "amount": "40 unidades",
+          "title": "Planta Duplex Inferior",
+          "size": "297<span>m²</span>",
+          "amount": "02 unidades",
           "items": [
-            "4 dorms.",
-            "2 suites",
-            "2 vagas"
+            "4 suites",
+            "3 vagas"
           ],
           "image": {
             "main": {
-              "url": "/spaces/1.png",
+              "url": "/spaces/2.png",
               "size": {
-                "width": 890,
-                "height": 571
+                "width": 1049,
+                "height": 508
               }
             }
           }
         },
         {
-          "title": "163<span>m²</span>",
-          "amount": "40 unidades",
+          "title": "Planta Duplex Superior",
+          "size": "297<span>m²</span>",
+          "amount": "02 unidades",
           "items": [
-            "4 dorms.",
-            "2 suites",
-            "2 vagas"
+            "4 suites",
+            "3 vagas"
           ],
           "image": {
             "main": {
-              "url": "/spaces/1.png",
+              "url": "/spaces/3.png",
               "size": {
-                "width": 890,
-                "height": 571
+                "width": 1037,
+                "height": 463
               }
             }
           }
+        },
+        {
+          "title": "Planta Decorado",
+          "size": "163<span>m²</span>",
+          "amount": "02 unidades",
+          "items": [
+            "3 suites"
+          ],
+          "image": {
+            "main": {
+              "url": "/spaces/4.png",
+              "size": {
+                "width": 1000,
+                "height": 500
+              }
+            }
+          }
+        }
+      ]
+    },
+    "localizacao": {
+      "title": "SUA <span>CONEXÃO</span> COM O MELHOR DO BAIRRO COMEÇA AGORA",
+      "button": "Confira a infraestrutura do bairro",
+      "background": "/sao-paulo.jpg",
+      "modal": [
+        {
+          "title": "LAZER E CULTURA",
+          "options": [
+            "01 - TEATRO VIRA DA LATA",
+            "02 - TEATRO VIGA ESPAÇO CÊNICO",
+            "03 - PARQUE ZILDA NATEL"
+          ]
+        },
+        {
+          "title": "GASTRONOMIA",
+          "options": [
+            "04 - BAR DO SACHA",
+            "05 - O’MALLEY’S BAR",
+            "06 - jAZZ NOS FUNDOS",
+            "07 - MERCEARIA SÃO PEDRO",
+            "08 - BOTECO SÃO CONRADO",
+            "09 - RAW BURGUER",
+            "10 - MORRISSON ROCK BAR",
+            "11 - VIVOS BAR & RESTAURANTE",
+            "12 - SALGASTRONOMIA",
+            "13 - BULLGUER VILA MADALENA",
+            "14 - LE PAIN QUOTIDIEN",
+            "15 - COFFEE LAB",
+            "16 - BOTECO SÃO BENTO"
+          ]
+        },
+        {
+          "title": "EDUCaÇÃO",
+          "options": [
+            "17 - FACULDADE SUMARÉ",
+            "18 - COLÉGIO NOTREDAME",
+            "19 - FACULDADE DE SAÚDE PÚBLICA USP"
+          ]
+        },
+        {
+          "title": "BANCO",
+          "options": [
+            "20 - BANCO 24 HORAS",
+            "21 - ITAÚ",
+            "22 - BANCO DO BRASIL",
+            "23 - BRADESCO"
+          ]
+        },
+        {
+          "title": "SUPERMERCADOS E  PADARIAS",
+          "options": [
+            "24 - PÃO DE AÇUCAR",
+            "25 - MERCADO SUMARÉ",
+            "26 - PANIFICADORA SIAPÃO"
+          ]
+        },
+        {
+          "title": "ACADEMiA",
+          "options": [
+            "27 - COMPETITION SPORTS CLUB",
+            "28 - MEDSPORT ESCOLA DE ESPortES",
+            "29 - ESCOLA MUNDO AZUL"
+          ]
+        },
+        {
+          "title": "SAÚDE",
+          "options": [
+            "30 - HOSPITAL SANCTA MAGGIORE",
+            "31 - INCOR",
+            "32 - INST. DE INFECTOLOGIA EMÍLIO RIBAS",
+            "33 - INST. DA CRIANÇA DO HOSP. DAS CLÍNICAS",
+            "34 - ITACI - INSTITUTO DE TRaTAMENTO DO CÂNCER INFANTIL",
+            "35 - FUNDAÇÃO PRÓ - SANGUE",
+            "HEMO C ENTRO DE SÃO PAULO"
+          ]
+        },
+        {
+          "title": "OUTROS",
+          "options": [
+            "36 - FÓRUM REGIONALD E PINHEIROS XI",
+            "37 - SANTUÁRIO N. SRA. DO ROSÁRIO DE FÁTIMA",
+            "38 - CACHORRÓ DROMO SUMARÉ"
+          ]
         }
       ]
     }

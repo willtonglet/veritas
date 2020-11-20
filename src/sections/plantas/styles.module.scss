@@ -2,41 +2,20 @@
 @import '@core/styles/variables';
 
 .plantas {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $grey;
 
-    &__grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        width: 100%;
+    @include md {
+        background-color: unset;
+    }
 
-        &__background {
-            grid-column-start: 1;
-            grid-column-end: 1;
-            grid-row-start: 1;
-            grid-row-end: 1;
-            display: grid;
-            grid-template-areas: 'black grey';
+    &__container {
+        margin: 2.5rem 0;
 
-            &--black {
-                background-color: $primary;
-                grid-area: black;
-            }
-
-            &--grey {
-                background-color: $grey;
-                grid-area: grey;
-            }
-        }
-
-        &__container {
-            grid-column-start: 1;
-            grid-column-end: 1;
-            grid-row-start: 1;
-            grid-row-end: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        @include md {
+            margin: unset;
         }
     }
 }

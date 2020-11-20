@@ -1,4 +1,5 @@
 import { useEffect, useRef, useContext } from 'react';
+import clsx from 'clsx';
 import { VscClose } from 'react-icons/vsc';
 
 import Reveal from '@components/Reveal';
@@ -11,9 +12,16 @@ interface Props {
     isOpen: boolean;
     onClose: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
     title?: string;
+    isFullScreen?: boolean;
 }
 
-const Modal: React.FC<Props> = ({ children, isOpen = false, onClose, title }) => {
+const Modal: React.FC<Props> = ({
+    children,
+    isOpen = false,
+    onClose,
+    title,
+    isFullScreen = false
+}) => {
     const modalRef = useRef<HTMLDivElement>(null);
     const { setScrollBlocked } = useContext(AppContext);
 
@@ -32,8 +40,18 @@ const Modal: React.FC<Props> = ({ children, isOpen = false, onClose, title }) =>
             {isOpen && (
                 <div className={styles.modal}>
                     <Reveal animation="top" duration={700}>
-                        <div className={styles.modal__wrapper} ref={modalRef}>
-                            <div className={styles.modal__container} ref={modalRef}>
+                        <div
+                            className={clsx(
+                                styles.modal__wrapper,
+                                isFullScreen && styles['modal__wrapper--isFullScreen']
+                            )}
+                            ref={modalRef}>
+                            <div
+                                className={clsx(
+                                    styles.modal__container,
+                                    isFullScreen && styles['modal__container--isFullScreen']
+                                )}
+                                ref={modalRef}>
                                 <button onClick={onClose} className={styles.modal__close}>
                                     <VscClose />
                                 </button>

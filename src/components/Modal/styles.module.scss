@@ -19,6 +19,12 @@
         max-width: 960px;
         z-index: 2;
         position: relative;
+
+        &--isFullScreen {
+            width: 100vw;
+            height: 100vh;
+            max-width: unset;
+        }
     }
 
     &__container {
@@ -31,6 +37,14 @@
         @include md {
             height: auto;
             max-height: 90vh;
+        }
+
+        &--isFullScreen {
+            @include md {
+                width: 100vw;
+                height: 100vh;
+                max-height: unset;
+            }
         }
     }
 

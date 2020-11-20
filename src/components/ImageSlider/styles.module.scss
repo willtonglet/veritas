@@ -3,27 +3,39 @@
 
 .image-slider {
     display: grid;
-    grid-template-columns: repeat(15, 1fr) 3rem;
-    grid-template-rows: 3rem 1fr 3rem;
+    grid-template-columns: repeat(16, 1fr);
     background-color: $grey;
+
+    @include md {
+        grid-template-columns: repeat(15, 1fr) 3rem;
+        grid-template-rows: 3rem 1fr 3rem;
+    }
 
     &__navigation {
         grid-column-start: 1;
-        grid-column-end: 4;
+        grid-column-end: 17;
         grid-row-start: 1;
-        grid-row-end: 4;
+        grid-row-end: 2;
         background-color: $primary;
-        padding: 3rem 0 3rem 0;
+        padding: 3rem 3rem 5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include md {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            padding: 3rem 3rem 3rem 5rem;
+        }
     }
 
     &__controls {
         display: flex;
         position: absolute;
-        bottom: 1rem;
-        right: 1rem;
+        bottom: 2rem;
+        right: 2rem;
 
         button {
             background-color: transparent;
@@ -49,13 +61,24 @@
     }
 
     &__images {
-        grid-column-start: 4;
-        grid-column-end: 16;
-        grid-row-start: 2;
-        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 17;
+        grid-row-start: 0;
+        grid-row-end: 1;
         background-color: $primaryLight;
         padding: 5rem;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include md {
+            grid-column-start: 5;
+            grid-column-end: 16;
+            grid-row-start: 2;
+            grid-row-end: 2;
+            height: 560px;
+        }
 
         &__maximize {
             position: absolute;
@@ -66,6 +89,19 @@
 
     &__slide {
         &__text {
+            text-align: center;
+
+            @include md {
+                text-align: unset;
+            }
+
+            h4 {
+                font-size: 1.3rem;
+                color: $secondary;
+                text-transform: uppercase;
+                margin-bottom: 0;
+            }
+
             h2 {
                 font-size: 4.5rem;
                 color: $secondary;
@@ -84,8 +120,14 @@
                 font-size: 1.5rem;
                 padding: 0.5rem 1.5rem;
                 margin-bottom: 2rem;
-                margin-left: -1.5rem;
                 display: flex;
+                justify-content: center;
+
+                @include md {
+                    margin-left: -1.5rem;
+                    margin-right: -4rem;
+                    justify-content: unset;
+                }
             }
 
             li {

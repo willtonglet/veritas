@@ -34,7 +34,7 @@ const ModalSlider: React.FC<Props> = ({
     return (
         <>
             {isOpen && (
-                <Reveal animation="top" duration={1000}>
+                <Reveal animation="top" duration={500}>
                     <div
                         className={clsx(
                             styles['modal-slider'],
@@ -58,7 +58,12 @@ const ModalSlider: React.FC<Props> = ({
                                         index === currentSlide &&
                                             styles['modal-slider__container__image--active']
                                     )}>
-                                    <Spinner className={styles['modal-slider__spinner']} />
+                                    <Spinner
+                                        className={clsx(
+                                            styles['modal-slider__spinner'],
+                                            isLightMode && styles['modal-slider__spinner--light']
+                                        )}
+                                    />
                                     <Image
                                         src={slide.image.main.url}
                                         width={slide.image.main.size.width}

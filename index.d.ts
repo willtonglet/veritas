@@ -28,6 +28,7 @@ interface SlidesInterface {
 }
 
 interface SpacesInterface extends SlidesInterface {
+    size: string;
     amount: string;
     items: Array<string>;
 }
@@ -37,4 +38,9 @@ interface ImageProps {
         width: number;
         height: number;
     };
+}
+
+interface LocationProps {
+    title: string;
+    options: Array<string>;
 }
