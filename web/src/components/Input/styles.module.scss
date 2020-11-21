@@ -1,0 +1,33 @@
+@import '@core/styles/mq';
+@import '@core/styles/variables';
+
+.input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    input {
+        margin: 0.3rem;
+        background-color: transparent;
+        border: 1px solid $secondary;
+        padding: 0 3rem 0 1rem;
+        font-size: 1rem;
+        height: 4rem;
+        transition: 0.25s ease-in-out;
+
+        &:focus {
+            border-color: $primary;
+        }
+
+        &::placeholder {
+            text-transform: uppercase;
+        }
+    }
+
+    &__status {
+        position: absolute;
+        right: 1rem;
+        top: 1.6rem;
+        font-size: 1.2rem;
+    }
+}

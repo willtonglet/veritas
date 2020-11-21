@@ -1,0 +1,29 @@
+@import '@core/styles/mq';
+@import '@core/styles/variables';
+
+.perspectivas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+    padding-bottom: 3rem;
+
+    @include sm {
+        margin: 1rem 0 3rem;
+    }
+
+    &__title {
+        background-color: $primary;
+        padding: 3rem 2rem;
+        text-align: center;
+        color: $primaryLight;
+
+        @include sm {
+            position: absolute;
+            padding: 1.5rem 3.5rem;
+            top: -2.5rem;
+            z-index: 2;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+import { useState } from 'react';
+import InputMask from 'react-input-mask';
+import clsx from 'clsx';
+
+import styles from './styles.module.scss';
+import { VscError } from 'react-icons/vsc';
+
+interface Props extends React.HTMLAttributes<HTMLInputElement> {
+    className?: string;
+    isRequired?: boolean;
+    value: string;
+    type?: 'text' | 'email' | 'tel';
+    mask?: string | (string | RegExp)[];
+}
+
+const Input: React.FC<Props> = ({
+    className,
+    isRequired = false,
+    value,
+    type = 'text',
+    mask,
+    ...rest
+}) => {
+    const [error, setError] = useState(false);
+
+    const isEmail = (val: string) => {
+        const regEmail = /^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return !regEmail.test(val);
+    };
+
+    const handleEmail = () =>
+        type === 'email' && value && isEmail(value) ? setError(true) : setError(false);
+
+    return (
+        <div className={clsx(styles.input, className)}>
+            <InputMask
+                mask={mask as string}
+                formNoValidate
+                onBlur={handleEmail}
+                value={value}
+                type={type}
+                required={isRequired}
+                {...rest}
+            />
+            {error && <VscError color="red" className={styles.input__status} />}
+        </div>
+    );
+};
+
+export default Input;

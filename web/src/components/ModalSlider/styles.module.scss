@@ -1,0 +1,129 @@
+@import '@core/styles/mq';
+@import '@core/styles/variables';
+@import '@core/styles/animations';
+
+.modal-slider {
+    background-color: $primary;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    animation: top 0.5s ease-in-out forwards;
+
+    &--light {
+        background-color: $primaryLight;
+    }
+
+    &__text {
+        background-color: $secondary;
+        padding: 1rem 2rem;
+        color: $primary;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        font-size: 2rem;
+        margin-left: 0.5rem;
+        z-index: 2;
+    }
+
+    &__close {
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1rem;
+        line-height: 0;
+        background-color: $primary;
+        z-index: 2;
+
+        * {
+            font-size: 32px;
+            color: $primaryLight;
+        }
+    }
+
+    &__container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        img {
+            animation: fadeIn 0.8s ease-in-out forwards;
+            display: block;
+        }
+
+        &__image {
+            display: none;
+
+            &--active {
+                display: unset;
+            }
+        }
+    }
+
+    &__footer {
+        position: relative;
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+
+        &__button {
+            background-color: transparent;
+            padding: 0 1rem;
+            line-height: 0;
+
+            &:disabled {
+                opacity: 0.3;
+                cursor: unset;
+
+                &:hover {
+                    * {
+                        transform: unset;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                border-left: 1px solid $secondary;
+            }
+
+            &:hover {
+                * {
+                    transform: translateY(-0.1rem) translateX(-0.1rem) scale(1.2);
+                }
+            }
+
+            * {
+                font-size: 32px;
+                color: $primaryLight;
+                transition: 0.25s ease-in-out;
+            }
+
+            &--light {
+                * {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    &__spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.7);
+
+        &--light {
+            filter: invert(1);
+            opacity: 0.5;
+        }
+    }
+}

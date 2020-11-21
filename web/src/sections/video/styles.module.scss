@@ -1,0 +1,137 @@
+@import '@core/styles/mq';
+@import '@core/styles/variables';
+
+.video {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin-top: 6rem;
+    background-color: $primary;
+
+    &__background {
+        width: 100vw;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 'a b';
+        grid-column-start: 1;
+        grid-row-start: 1;
+        display: none;
+
+        @include lg {
+            display: grid;
+        }
+
+        &--a {
+            grid-area: a;
+            background-color: $secondary;
+        }
+
+        &--b {
+            grid-area: b;
+            background-color: $primary;
+        }
+    }
+
+    &__container {
+        width: 100vw;
+        grid-column-start: 1;
+        grid-row-start: 1;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+
+        &__logo {
+            background-color: $secondary;
+            grid-column-start: 1;
+            grid-column-end: 7;
+            grid-row-start: 1;
+            align-items: center;
+            justify-content: flex-start;
+            display: none;
+
+            @include lg {
+                display: flex;
+                padding-left: 2rem;
+            }
+
+            @include xl {
+                padding-left: unset;
+                justify-content: center;
+            }
+        }
+
+        &__video {
+            background-color: $primary;
+            grid-column-start: 1;
+            grid-column-end: 17;
+            grid-row-start: 1;
+            display: grid;
+            grid-template-columns: 1fr;
+
+            @include lg {
+                grid-column-start: 7;
+            }
+
+            &__v {
+                grid-column-start: 1;
+                grid-row-start: 1;
+                width: 100%;
+            }
+
+            &__frame {
+                grid-column-start: 1;
+                grid-row-start: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                padding: 2rem 0;
+
+                &--active {
+                    button {
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: 0.5s ease-in-out;
+                    }
+                    &:hover {
+                        button {
+                            opacity: 1;
+                            pointer-events: unset;
+                        }
+                    }
+                }
+
+                @include md {
+                    padding: 3rem;
+                }
+
+                video {
+                    width: 100%;
+
+                    @include lg {
+                        width: unset;
+                    }
+                }
+
+                &__button {
+                    background-color: transparent;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    line-height: 0;
+                    z-index: 2;
+
+                    * {
+                        font-size: 6rem;
+                        color: $primaryLight;
+                    }
+                }
+            }
+        }
+    }
+}

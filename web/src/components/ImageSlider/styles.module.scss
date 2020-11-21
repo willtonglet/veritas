@@ -1,0 +1,135 @@
+@import '@core/styles/mq';
+@import '@core/styles/variables';
+
+.image-slider {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    background-color: $grey;
+
+    @include md {
+        grid-template-columns: repeat(15, 1fr) 3rem;
+        grid-template-rows: 3rem 1fr 3rem;
+    }
+
+    &__navigation {
+        grid-column-start: 1;
+        grid-column-end: 17;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-color: $primary;
+        padding: 3rem 3rem 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+
+        @include md {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            padding: 3rem 3rem 3rem 5rem;
+        }
+    }
+
+    &__controls {
+        display: flex;
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+
+        button {
+            background-color: transparent;
+
+            * {
+                color: $secondary;
+                font-size: 3rem;
+                transition: 0.25s ease-in-out;
+            }
+
+            &:nth-child(1):hover {
+                * {
+                    transform: scale(1.1) translate(0, -0.05rem);
+                }
+            }
+
+            &:nth-child(2):hover {
+                * {
+                    transform: scale(1.1) translate(-0.05rem, -0.05rem);
+                }
+            }
+        }
+    }
+
+    &__images {
+        grid-column-start: 1;
+        grid-column-end: 17;
+        grid-row-start: 0;
+        grid-row-end: 1;
+        background-color: $primaryLight;
+        padding: 5rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include md {
+            grid-column-start: 5;
+            grid-column-end: 16;
+            grid-row-start: 2;
+            grid-row-end: 2;
+            height: 560px;
+        }
+
+        @include xl {
+            height: 600px;
+        }
+
+        &__maximize {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    &__slide {
+        &__text {
+            h4 {
+                font-size: 1.3rem;
+                color: $secondary;
+                text-transform: uppercase;
+                margin-bottom: 0;
+            }
+
+            h2 {
+                font-size: 4.5rem;
+                color: $secondary;
+                margin-bottom: 0.5rem;
+
+                span {
+                    text-transform: none;
+                    font-size: 2.5rem;
+                }
+            }
+
+            h3 {
+                background-color: $secondary;
+                color: $primary;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                padding: 0.5rem 1.5rem;
+                margin-bottom: 2rem;
+                display: flex;
+                margin-left: -1.5rem;
+                margin-right: -4rem;
+            }
+
+            li {
+                font-size: 1.3rem;
+                color: $primaryLight;
+                text-transform: uppercase;
+                margin-bottom: 0.3rem;
+            }
+        }
+    }
+}

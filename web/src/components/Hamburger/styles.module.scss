@@ -1,0 +1,107 @@
+@import '@core/styles/variables';
+
+.hamburger {
+    position: relative;
+    border: none;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    transition-duration: 0.5s;
+
+    .icon-left {
+        transition-duration: 0.5s;
+        position: absolute;
+        height: 4px;
+        width: 15px;
+        top: 12px;
+        background-color: $primaryLight;
+
+        &:before {
+            transition-duration: 0.5s;
+            position: absolute;
+            width: 15px;
+            height: 4px;
+            background-color: $primaryLight;
+            content: '';
+            top: -10px;
+        }
+
+        &:after {
+            transition-duration: 0.5s;
+            position: absolute;
+            width: 15px;
+            height: 4px;
+            background-color: $primaryLight;
+            content: '';
+            top: 10px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .icon-right {
+        transition-duration: 0.5s;
+        position: absolute;
+        height: 4px;
+        width: 15px;
+        top: 12px;
+        background-color: $primaryLight;
+        left: 15px;
+
+        &:before {
+            transition-duration: 0.5s;
+            position: absolute;
+            width: 15px;
+            height: 4px;
+            background-color: $primaryLight;
+            content: '';
+            top: -10px;
+        }
+
+        &:after {
+            transition-duration: 0.5s;
+            position: absolute;
+            width: 15px;
+            height: 4px;
+            background-color: $primaryLight;
+            content: '';
+            top: 10px;
+        }
+    }
+
+    &.open {
+        .icon-left {
+            transition-duration: 0.5s;
+            background: transparent;
+
+            &:before {
+                transform: rotateZ(45deg) scaleX(1.4) translate(2px, 2px);
+                background-color: $primary;
+            }
+
+            &:after {
+                transform: rotateZ(-45deg) scaleX(1.4) translate(2px, -2px);
+                background-color: $primary;
+            }
+        }
+        .icon-right {
+            transition-duration: 0.5s;
+            background: transparent;
+
+            &:before {
+                transform: rotateZ(-45deg) scaleX(1.4) translate(-2px, 2px);
+                background-color: $primary;
+            }
+
+            &:after {
+                transform: rotateZ(45deg) scaleX(1.4) translate(-2px, -2px);
+                background-color: $primary;
+            }
+        }
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}

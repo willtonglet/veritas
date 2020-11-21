@@ -1,0 +1,624 @@
+{
+  "title": "Veritás - Vila Madalena",
+  "meta": {
+    "description": "Veritás - Vila Madalena"
+  },
+  "content": {
+    "cover": {
+      "title": "<span>São Paulo</span><br />acaba de<br />ganhar<br />uma nova<br />identidade"
+    },
+    "info": {
+      "text": "Informações e Vendas",
+      "phone": "<span>(99)</span> 99999-9999",
+      "button": "Entre em contato via WhatsApp"
+    },
+    "empreendimento": {
+      "title": "O Empreendimento",
+      "mosaic": [
+        {
+          "title": "Área total",
+          "description": "1 Torre com área<br />de 1.636,00 M²",
+          "icon": "/icons/mosaic1.svg"
+        },
+        {
+          "title": "Vagas",
+          "description": "02 para unidades tipo E 03 para unidades duplex",
+          "icon": "/icons/mosaic1.svg"
+        },
+        {
+          "title": "Unidades por Andar",
+          "description": "02 unidades por andar, com térreo e 28 pavimentos",
+          "icon": "/icons/mosaic3.svg"
+        },
+        {
+          "title": "Localização",
+          "description": "7 minutos a pé do<br />metrô Sumaré",
+          "icon": "/icons/mosaic1.svg"
+        }
+      ],
+      "modalButton": "Ficha Completa",
+      "modal": {
+        "title": "FICHA TÉCNICA",
+        "content": [
+          {
+            "title": "REALIZAÇÃO:",
+            "description": " GRUPO KALLAS"
+          },
+          {
+            "title": "INCORPORAÇÃO:",
+            "description": "KALLAS ARKHES"
+          },
+          {
+            "title": "PROJETO ARQUITETÔNICO:",
+            "description": "GAAZ ARQUITETURA"
+          },
+          {
+            "title": "PROJETO DE INTERIORES:",
+            "description": "JOÃO ARMENTANO"
+          },
+          {
+            "title": "PROJETO PAISAGÍSTICO:",
+            "description": "GILBERTO ELKIS"
+          },
+          {
+            "title": "ÁREA DO TERRENO:",
+            "description": "1.636,00 M²"
+          },
+          {
+            "title": "TORRE:",
+            "description": " 01"
+          },
+          {
+            "title": "NÚMEROD E ELEVADORES:",
+            "description": "2 SOCIAIS E 01 SERVIÇO"
+          },
+          {
+            "title": "NÚMERO DE PAVIMENTOS:",
+            "description": "3SS + TÉRREO + 28 PAVIMENTOS"
+          },
+          {
+            "title": "LOJAS:",
+            "description": "01"
+          },
+          {
+            "title": "UNIDADES",
+            "description": "POR ANDAR: 02 UNIDADES"
+          },
+          {
+            "title": "VAGAS:",
+            "description": "02 PARA UN. TIPO E 03 PARA UN. DUPLEX"
+          },
+          {
+            "title": "ÁREAS COMUNS:",
+            "description": "LOBBY, PLAYGROUND, PISCINA, FITNESS, BIBLIOTECA, ESPAÇO KIDS, SALÃO DE FESTAS, GALERIA, ESPAÇO GOURMET, SALÃO DE JOGOS E TERRAÇO GOURMET"
+          }
+        ]
+      }
+    },
+    "perspectivas": {
+      "title": "Perspectivas",
+      "slides": [
+        {
+          "title": "Portaria",
+          "image": {
+            "main": {
+              "url": "/gallery/1.jpg",
+              "size": {
+                "width": 2000,
+                "height": 800
+              }
+            },
+            "cover": {
+              "url": "/gallery/1-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/1-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Lobby",
+          "image": {
+            "main": {
+              "url": "/gallery/2.jpg",
+              "size": {
+                "width": 2000,
+                "height": 908
+              }
+            },
+            "cover": {
+              "url": "/gallery/2-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/2-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Biblioteca",
+          "image": {
+            "main": {
+              "url": "/gallery/3.jpg",
+              "size": {
+                "width": 2000,
+                "height": 1290
+              }
+            },
+            "cover": {
+              "url": "/gallery/3-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/3-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Galeria",
+          "image": {
+            "main": {
+              "url": "/gallery/4.jpg",
+              "size": {
+                "width": 2000,
+                "height": 1538
+              }
+            },
+            "cover": {
+              "url": "/gallery/4-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/4-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Fitness",
+          "image": {
+            "main": {
+              "url": "/gallery/5.jpg",
+              "size": {
+                "width": 2500,
+                "height": 584
+              }
+            },
+            "cover": {
+              "url": "/gallery/5-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/5-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Salão de Festas",
+          "image": {
+            "main": {
+              "url": "/gallery/6.jpg",
+              "size": {
+                "width": 2114,
+                "height": 912
+              }
+            },
+            "cover": {
+              "url": "/gallery/6-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/6-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Piscina",
+          "image": {
+            "main": {
+              "url": "/gallery/7.jpg",
+              "size": {
+                "width": 2000,
+                "height": 1111
+              }
+            },
+            "cover": {
+              "url": "/gallery/7-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/7-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Playground",
+          "image": {
+            "main": {
+              "url": "/gallery/8.jpg",
+              "size": {
+                "width": 2500,
+                "height": 834
+              }
+            },
+            "cover": {
+              "url": "/gallery/8-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/8-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Lounge Externo",
+          "image": {
+            "main": {
+              "url": "/gallery/9.jpg",
+              "size": {
+                "width": 2000,
+                "height": 625
+              }
+            },
+            "cover": {
+              "url": "/gallery/9-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/9-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Terraço Gourmet",
+          "image": {
+            "main": {
+              "url": "/gallery/10.jpg",
+              "size": {
+                "width": 2500,
+                "height": 500
+              }
+            },
+            "cover": {
+              "url": "/gallery/10-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/10-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Espaço Gourmet",
+          "image": {
+            "main": {
+              "url": "/gallery/11.jpg",
+              "size": {
+                "width": 3200,
+                "height": 517
+              }
+            },
+            "cover": {
+              "url": "/gallery/11-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/11-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Salão de Jogos",
+          "image": {
+            "main": {
+              "url": "/gallery/12.jpg",
+              "size": {
+                "width": 2000,
+                "height": 784
+              }
+            },
+            "cover": {
+              "url": "/gallery/12-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/12-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        },
+        {
+          "title": "Espaço Kids",
+          "image": {
+            "main": {
+              "url": "/gallery/13.jpg",
+              "size": {
+                "width": 2000,
+                "height": 1333
+              }
+            },
+            "cover": {
+              "url": "/gallery/13-cover.jpg",
+              "size": {
+                "width": 980,
+                "height": 600
+              }
+            },
+            "thumb": {
+              "url": "/gallery/13-thumb.jpg",
+              "size": {
+                "width": 163,
+                "height": 100
+              }
+            }
+          }
+        }
+      ]
+    },
+    "plantas": {
+      "slides": [
+        {
+          "title": "Planta Humanizada",
+          "size": "163<span>m²</span>",
+          "amount": "40 unidades",
+          "items": [
+            "4 dorms.",
+            "2 suites",
+            "2 vagas"
+          ],
+          "image": {
+            "main": {
+              "url": "/spaces/1.png",
+              "size": {
+                "width": 890,
+                "height": 571
+              }
+            }
+          }
+        },
+        {
+          "title": "Planta Duplex Inferior",
+          "size": "297<span>m²</span>",
+          "amount": "02 unidades",
+          "items": [
+            "4 suites",
+            "3 vagas"
+          ],
+          "image": {
+            "main": {
+              "url": "/spaces/2.png",
+              "size": {
+                "width": 1049,
+                "height": 508
+              }
+            }
+          }
+        },
+        {
+          "title": "Planta Duplex Superior",
+          "size": "297<span>m²</span>",
+          "amount": "02 unidades",
+          "items": [
+            "4 suites",
+            "3 vagas"
+          ],
+          "image": {
+            "main": {
+              "url": "/spaces/3.png",
+              "size": {
+                "width": 1037,
+                "height": 463
+              }
+            }
+          }
+        },
+        {
+          "title": "Planta Decorado",
+          "size": "163<span>m²</span>",
+          "amount": "02 unidades",
+          "items": [
+            "3 suites"
+          ],
+          "image": {
+            "main": {
+              "url": "/spaces/4.png",
+              "size": {
+                "width": 1000,
+                "height": 500
+              }
+            }
+          }
+        }
+      ]
+    },
+    "localizacao": {
+      "title": "SUA <span>CONEXÃO</span> COM O MELHOR DO BAIRRO COMEÇA AGORA",
+      "button": "Confira a infraestrutura do bairro",
+      "background": "/sao-paulo.jpg",
+      "modal": [
+        {
+          "title": "LAZER E CULTURA",
+          "options": [
+            "01 - TEATRO VIRA DA LATA",
+            "02 - TEATRO VIGA ESPAÇO CÊNICO",
+            "03 - PARQUE ZILDA NATEL"
+          ]
+        },
+        {
+          "title": "GASTRONOMIA",
+          "options": [
+            "04 - BAR DO SACHA",
+            "05 - O’MALLEY’S BAR",
+            "06 - jAZZ NOS FUNDOS",
+            "07 - MERCEARIA SÃO PEDRO",
+            "08 - BOTECO SÃO CONRADO",
+            "09 - RAW BURGUER",
+            "10 - MORRISSON ROCK BAR",
+            "11 - VIVOS BAR & RESTAURANTE",
+            "12 - SALGASTRONOMIA",
+            "13 - BULLGUER VILA MADALENA",
+            "14 - LE PAIN QUOTIDIEN",
+            "15 - COFFEE LAB",
+            "16 - BOTECO SÃO BENTO"
+          ]
+        },
+        {
+          "title": "EDUCaÇÃO",
+          "options": [
+            "17 - FACULDADE SUMARÉ",
+            "18 - COLÉGIO NOTREDAME",
+            "19 - FACULDADE DE SAÚDE PÚBLICA USP"
+          ]
+        },
+        {
+          "title": "BANCO",
+          "options": [
+            "20 - BANCO 24 HORAS",
+            "21 - ITAÚ",
+            "22 - BANCO DO BRASIL",
+            "23 - BRADESCO"
+          ]
+        },
+        {
+          "title": "SUPERMERCADOS E  PADARIAS",
+          "options": [
+            "24 - PÃO DE AÇUCAR",
+            "25 - MERCADO SUMARÉ",
+            "26 - PANIFICADORA SIAPÃO"
+          ]
+        },
+        {
+          "title": "ACADEMiA",
+          "options": [
+            "27 - COMPETITION SPORTS CLUB",
+            "28 - MEDSPORT ESCOLA DE ESPortES",
+            "29 - ESCOLA MUNDO AZUL"
+          ]
+        },
+        {
+          "title": "SAÚDE",
+          "options": [
+            "30 - HOSPITAL SANCTA MAGGIORE",
+            "31 - INCOR",
+            "32 - INST. DE INFECTOLOGIA EMÍLIO RIBAS",
+            "33 - INST. DA CRIANÇA DO HOSP. DAS CLÍNICAS",
+            "34 - ITACI - INSTITUTO DE TRaTAMENTO DO CÂNCER INFANTIL",
+            "35 - FUNDAÇÃO PRÓ - SANGUE",
+            "HEMO C ENTRO DE SÃO PAULO"
+          ]
+        },
+        {
+          "title": "OUTROS",
+          "options": [
+            "36 - FÓRUM REGIONALD E PINHEIROS XI",
+            "37 - SANTUÁRIO N. SRA. DO ROSÁRIO DE FÁTIMA",
+            "38 - CACHORRÓ DROMO SUMARÉ"
+          ]
+        }
+      ]
+    },
+    "mapa": {
+      "title": "7 min",
+      "legend": "A PÉ DO METRÔ  SUMARÉ",
+      "streets": [
+        "AV. SUMARÉ",
+        "AV. DR. ARNALDO",
+        "R. HEITOR PENTEADO",
+        "R. OSCAR FREIRE"
+      ],
+      "image": {
+        "url": "/mapa.png",
+        "size": {
+          "width": 1088,
+          "height": 576
+        }
+      }
+    },
+    "contato": {
+      "title": "Agende uma visita"
+    }
+  }
+}

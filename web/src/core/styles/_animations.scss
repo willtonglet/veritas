@@ -1,0 +1,81 @@
+@keyframes load {
+    from {
+        width: 0vw;
+    }
+    to {
+        width: 100vw;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        filter: blur(1rem);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        filter: blur(0);
+    }
+    100% {
+        opacity: 0;
+        filter: blur(1rem);
+    }
+}
+
+@keyframes left {
+    0% {
+        opacity: 0;
+        transform: translateX(-10vw);
+        filter: blur(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+@keyframes right {
+    0% {
+        opacity: 0;
+        transform: translateX(10vw);
+        filter: blur(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes top {
+    0% {
+        opacity: 0;
+        transform: translateY(-10vw);
+        filter: blur(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(10vw);
+        filter: blur(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}

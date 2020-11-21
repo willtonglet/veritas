@@ -1,0 +1,63 @@
+@import '@core/styles/mq';
+@import '@core/styles/variables';
+
+.contato {
+    display: flex;
+    justify-content: center;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+    }
+
+    &__image {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 1;
+    }
+
+    &__form {
+        grid-column-start: 7;
+        grid-column-end: 17;
+        grid-row-start: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        z-index: 2;
+
+        h2 {
+            background-color: $secondary;
+            color: $primaryLight;
+            padding: 1rem 3rem 1rem 7rem;
+            margin-left: -2rem;
+        }
+    }
+}
+
+.contato-form {
+    padding: 4rem 5rem;
+    background-color: $grey;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    &__input-box {
+        flex-basis: 50%;
+        display: flex;
+        position: relative;
+
+        &--full {
+            margin-left: 0;
+            flex-basis: 100%;
+        }
+    }
+
+    &__button {
+        background-color: $primary;
+        color: $primaryLight;
+        text-transform: uppercase;
+        padding: 1.2rem 2rem;
+        font-size: 1.3rem;
+        margin: 1rem 0.3rem 0 0;
+    }
+}
