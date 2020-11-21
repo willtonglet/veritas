@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 import clsx from 'clsx';
 
-import { BsBuilding } from 'react-icons/bs';
 import { VscAdd } from 'react-icons/vsc';
 
 import Container from '@components/Container';
@@ -18,7 +17,6 @@ const Empreendimento: React.FC<SectionProps> = ({ id }) => {
     const [isModalOpen, setModalOpen] = useState(false);
     const mosaic = (content('empreendimento.mosaic') as unknown) as MosaicInterface[];
     const modalContent = (content('empreendimento.modal.content') as unknown) as {
-        id: string;
         title: string;
         description: string;
     }[];

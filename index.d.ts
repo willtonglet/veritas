@@ -1,13 +1,7 @@
 declare module '*.png';
 
 interface PageProps {
-    content: {
-        title: string;
-        meta: {
-            [key: string]: string;
-        };
-        content: PageContentContentInterface;
-    };
+    content: PageContentContentInterface;
 }
 
 interface SectionProps {
@@ -18,6 +12,7 @@ interface MosaicInterface {
     title: string;
     description: string;
     icon: string;
+    id: 'area' | 'vagas' | 'unidades' | 'localizacao';
 }
 
 interface PageContentContentInterface {
