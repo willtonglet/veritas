@@ -1,7 +1,13 @@
 declare module '*.png';
 
 interface PageProps {
-    content: PageContentContentInterface;
+    content: {
+        title: string;
+        meta: {
+            [key: string]: string;
+        };
+        content: PageContentContentInterface;
+    };
 }
 
 interface SectionProps {

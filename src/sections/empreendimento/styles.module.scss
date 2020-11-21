@@ -146,6 +146,10 @@
         height: 260px;
     }
 
+    &__icon {
+        align-self: center;
+    }
+
     &--button {
         background-color: $primary;
         width: 100%;

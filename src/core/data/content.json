@@ -16,21 +16,25 @@
       "title": "O Empreendimento",
       "mosaic": [
         {
+          "id": "area",
           "title": "Área total",
           "description": "1 Torre com área<br />de 1.636,00 M²",
           "icon": "/icons/mosaic1.svg"
         },
         {
+          "id": "vagas",
           "title": "Vagas",
           "description": "02 para unidades tipo E 03 para unidades duplex",
           "icon": "/icons/mosaic1.svg"
         },
         {
+          "id": "unidades",
           "title": "Unidades por Andar",
           "description": "02 unidades por andar, com térreo e 28 pavimentos",
           "icon": "/icons/mosaic3.svg"
         },
         {
+          "id": "localizacao",
           "title": "Localização",
           "description": "7 minutos a pé do<br />metrô Sumaré",
           "icon": "/icons/mosaic1.svg"

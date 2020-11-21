@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import clsx from 'clsx';
+
+import { BsBuilding } from 'react-icons/bs';
 import { VscAdd } from 'react-icons/vsc';
 
 import Container from '@components/Container';
@@ -10,11 +12,13 @@ import Modal from '@components/Modal';
 import { content } from '@core/helpers/content';
 
 import styles from './styles.module.scss';
+import MosaicIcon from './MosaicIcon';
 
 const Empreendimento: React.FC<SectionProps> = ({ id }) => {
     const [isModalOpen, setModalOpen] = useState(false);
     const mosaic = (content('empreendimento.mosaic') as unknown) as MosaicInterface[];
     const modalContent = (content('empreendimento.modal.content') as unknown) as {
+        id: string;
         title: string;
         description: string;
     }[];
@@ -33,11 +37,7 @@ const Empreendimento: React.FC<SectionProps> = ({ id }) => {
                                         className={styles.empreendimento__grid__mosaic__item}>
                                         <Reveal animation="top" duration={500} delay={index * 100}>
                                             <div className={styles['grid-box']}>
-                                                <img
-                                                    src={box.icon}
-                                                    alt={box.title}
-                                                    className={styles['grid-box__icon']}
-                                                />
+                                                <MosaicIcon icon={box.id} />
                                                 <Content tag="h3">{box.title}</Content>
                                                 <Content tag="p">{box.description}</Content>
                                             </div>
