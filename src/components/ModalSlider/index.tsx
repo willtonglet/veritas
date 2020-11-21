@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { VscClose, VscChevronLeft, VscChevronRight } from 'react-icons/vsc';
 import clsx from 'clsx';
 
-import Reveal from '@components/Reveal';
 import Content from '@components/Content';
 import Spinner from '@components/Spinner';
 import AppContext from 'context';

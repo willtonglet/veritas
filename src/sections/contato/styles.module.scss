@@ -4,6 +4,11 @@
 .contato {
     display: flex;
     justify-content: center;
+    margin-top: 3rem;
+
+    @include md {
+        margin-top: 5rem;
+    }
 
     &__grid {
         display: grid;
@@ -14,10 +19,15 @@
         grid-column-start: 1;
         grid-column-end: 7;
         grid-row-start: 1;
+        display: none;
+
+        @include md {
+            display: unset;
+        }
     }
 
     &__form {
-        grid-column-start: 7;
+        grid-column-start: 1;
         grid-column-end: 17;
         grid-row-start: 1;
         display: flex;
@@ -25,26 +35,44 @@
         justify-content: flex-end;
         z-index: 2;
 
+        @include md {
+            grid-column-start: 7;
+        }
+
         h2 {
             background-color: $secondary;
             color: $primaryLight;
-            padding: 1rem 3rem 1rem 7rem;
-            margin-left: -2rem;
+            padding: 1.5rem;
+            text-align: center;
+
+            @include md {
+                text-align: unset;
+                margin-left: -2rem;
+                padding: 1.5rem 3rem 1.5rem 7rem;
+            }
         }
     }
 }
 
 .contato-form {
-    padding: 4rem 5rem;
+    padding: 3rem;
     background-color: $grey;
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
 
+    @include md {
+        padding: 5rem;
+    }
+
     &__input-box {
-        flex-basis: 50%;
+        flex-basis: 100%;
         display: flex;
         position: relative;
+
+        @include sm {
+            flex-basis: 50%;
+        }
 
         &--full {
             margin-left: 0;

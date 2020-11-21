@@ -5,8 +5,12 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    margin-top: 6rem;
     background-color: $primary;
+    margin-top: 3rem;
+
+    @include md {
+        margin-top: 6rem;
+    }
 
     &__background {
         width: 100vw;
@@ -79,6 +83,7 @@
             &__v {
                 grid-column-start: 1;
                 grid-row-start: 1;
+                height: 100%;
                 width: 100%;
             }
 

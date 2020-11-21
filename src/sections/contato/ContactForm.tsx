@@ -34,7 +34,7 @@ const ContactForm: React.FC = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form method="post" onSubmit={handleSubmit}>
             <div className={styles['contato-form']}>
                 <Input
                     isRequired

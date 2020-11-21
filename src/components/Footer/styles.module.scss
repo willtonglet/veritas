@@ -1,0 +1,82 @@
+@import '@core/styles/mq';
+@import '@core/styles/variables';
+
+.footer {
+    width: 100vw;
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #696969;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $primaryLight;
+        padding: 2rem;
+
+        @include lg {
+            padding: 2rem 0;
+        }
+    }
+
+    &__logo {
+        height: 40px;
+
+        @include md {
+            height: unset;
+        }
+    }
+
+    &__phone {
+        display: flex;
+        align-items: flex-end;
+        text-transform: uppercase;
+        text-align: right;
+
+        &__icon {
+            margin-right: 1rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            font-weight: $fontLight;
+        }
+    }
+
+    &-rights {
+        width: 100vw;
+        background-color: $primary;
+        display: flex;
+        justify-content: center;
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            color: $primaryLight;
+            padding: 0;
+        }
+
+        &__button {
+            line-height: 0;
+            background-color: $secondary;
+            padding: 1rem 1rem;
+
+            * {
+                font-size: 2rem;
+            }
+        }
+
+        span {
+            font-size: 1rem;
+            margin-left: 2rem;
+
+            @include lg {
+                margin-left: unset;
+            }
+        }
+    }
+}

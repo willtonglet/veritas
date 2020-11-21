@@ -1,9 +1,9 @@
 import { useState } from 'react';
+import { VscError } from 'react-icons/vsc';
 import InputMask from 'react-input-mask';
 import clsx from 'clsx';
 
 import styles from './styles.module.scss';
-import { VscError } from 'react-icons/vsc';
 
 interface Props extends React.HTMLAttributes<HTMLInputElement> {
     className?: string;
