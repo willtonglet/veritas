@@ -21,9 +21,10 @@ const Localizacao: React.FC<SectionProps> = ({ id }) => {
                     <div className={styles.localizacao__grid}>
                         <div className={styles.localizacao__image}>
                             <Image
-                                src={content('localizacao.background')}
+                                src={content('localizacao.background.url')}
                                 width={1316}
                                 height={658}
+                                alt={content('localizacao.background.alt')}
                                 layout="responsive"
                             />
                         </div>

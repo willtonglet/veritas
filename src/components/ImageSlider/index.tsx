@@ -83,6 +83,7 @@ const ImageSlider: React.FC<Props> = ({ slides }) => {
                                                 src={slide.image.main.url}
                                                 width={slide.image.main.size.width}
                                                 height={slide.image.main.size.height}
+                                                alt={slide.title}
                                                 layout="responsive"
                                                 loading="eager"
                                             />

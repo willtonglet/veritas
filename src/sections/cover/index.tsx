@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Container from '@components/Container';
 import Content from '@components/Content';
+import { content } from '@core/helpers/content';
+
 import styles from './styles.module.scss';
 
 const Cover: React.FC<SectionProps> = ({ id }) => {
@@ -8,9 +10,10 @@ const Cover: React.FC<SectionProps> = ({ id }) => {
         <section id={id} className={styles.cover}>
             <Container className={styles.cover__container}>
                 <Image
-                    src="/cover.jpg"
-                    width={660}
-                    height={750}
+                    src={content('cover.image.url')}
+                    width={content('cover.image.size.width')}
+                    height={content('cover.image.size.height')}
+                    alt={content('cover.image.alt')}
                     className={styles.cover__image}
                     loading="eager"
                 />

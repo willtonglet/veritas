@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     margin-top: 3rem;
+    margin-bottom: 5rem;
 
     @include md {
         margin-top: 5rem;
@@ -22,7 +23,8 @@
         display: none;
 
         @include md {
-            display: unset;
+            display: flex;
+            align-items: flex-end;
         }
     }
 

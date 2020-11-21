@@ -1,7 +1,15 @@
 {
   "content": {
     "cover": {
-      "title": "<span>São Paulo</span><br />acaba de<br />ganhar<br />uma nova<br />identidade"
+      "title": "<span>São Paulo</span><br />acaba de<br />ganhar<br />uma nova<br />identidade",
+      "image": {
+        "url": "/cover.jpg",
+        "alt": "Imagem de mulher com o V de Veritás atrás.",
+        "size": {
+          "width": 660,
+          "height": 750
+        }
+      }
     },
     "info": {
       "text": "Informações e Vendas",
@@ -10,6 +18,14 @@
     },
     "empreendimento": {
       "title": "O Empreendimento",
+      "image": {
+        "url": "/empreendimento.jpg",
+        "alt": "Foto do empreendimento",
+        "size": {
+          "width": 826,
+          "height": 1064
+        }
+      },
       "mosaic": [
         {
           "id": "area",
@@ -517,7 +533,10 @@
     "localizacao": {
       "title": "SUA <span>CONEXÃO</span> COM O MELHOR DO BAIRRO COMEÇA AGORA",
       "button": "Confira a infraestrutura do bairro",
-      "background": "/sao-paulo.jpg",
+      "background": {
+        "url": "/sao-paulo.jpg",
+        "alt": "Imagem com vista do bairro do empreendimento."
+      },
       "modal": [
         {
           "title": "LAZER E CULTURA",
@@ -614,11 +633,20 @@
         "size": {
           "width": 1088,
           "height": 576
-        }
+        },
+        "alt": "Mapa com a localização do empreendimento"
       }
     },
     "contato": {
-      "title": "Agende uma visita"
+      "title": "Agende uma visita",
+      "image": {
+        "url": "/empreendimento.jpg",
+        "alt": "Foto do empreendimento",
+        "size": {
+          "width": 826,
+          "height": 1064
+        }
+      }
     }
   }
 }

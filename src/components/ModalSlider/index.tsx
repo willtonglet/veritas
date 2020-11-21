@@ -66,6 +66,7 @@ const ModalSlider: React.FC<Props> = ({
                                     src={slide.image.main.url}
                                     width={slide.image.main.size.width}
                                     height={slide.image.main.size.height}
+                                    alt={slide.title}
                                 />
                             </div>
                         ))}

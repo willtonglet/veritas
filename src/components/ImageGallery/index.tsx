@@ -42,6 +42,7 @@ const ImageGallery: React.FC<Props> = ({ slides }) => {
                             src={slide.image.cover.url}
                             width={slide.image.cover.size.width}
                             height={slide.image.cover.size.height}
+                            alt={slide.title}
                             layout="responsive"
                             loading="eager"
                         />
@@ -81,6 +82,7 @@ const ImageGallery: React.FC<Props> = ({ slides }) => {
                                     src={slide.image.thumb.url}
                                     width={slide.image.thumb.size.width}
                                     height={slide.image.thumb.size.height}
+                                    alt={slide.title}
                                     layout="responsive"
                                     loading="eager"
                                 />

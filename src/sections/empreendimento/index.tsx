@@ -59,9 +59,10 @@ const Empreendimento: React.FC<SectionProps> = ({ id }) => {
                         </div>
                         <div className={styles.empreendimento__grid__image}>
                             <Image
-                                src="/empreendimento.jpg"
-                                width={826}
-                                height={1064}
+                                src={content('empreendimento.image.url')}
+                                width={content('empreendimento.image.size.width')}
+                                height={content('empreendimento.image.size.height')}
+                                alt={content('empreendimento.image.alt')}
                                 className={styles.cover__image}
                             />
                         </div>

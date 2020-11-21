@@ -33,6 +33,7 @@ const LocalizacaoMapa: React.FC = () => {
                         src={content('mapa.image.url')}
                         width={content('mapa.image.size.width')}
                         height={content('mapa.image.size.height')}
+                        alt={content('mapa.image.alt')}
                         layout="responsive"
                     />
                 </div>

@@ -22,13 +22,13 @@ const Video: React.FC = () => {
             </div>
             <div className={styles.video__container}>
                 <Container className={styles.video__grid}>
-                    <Reveal animation="bottom" duration={700}>
+                    <Reveal animation="left" duration={700}>
                         <div className={styles.video__grid__logo}>
                             <img src="/logo-white.svg" alt="Veritas" />
                         </div>
                     </Reveal>
                     <div className={styles.video__grid__video}>
-                        <Reveal animation="fadeIn" duration={700}>
+                        <Reveal animation="right" duration={700}>
                             <svg
                                 className={styles.video__grid__video__v}
                                 viewBox="0 0 920 583"
