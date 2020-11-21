@@ -25,6 +25,10 @@ const Video = dynamic(() => import('@sections/video'), {
     ssr: false
 });
 
+const Contato = dynamic(() => import('@sections/contato'), {
+    ssr: false
+});
+
 const Home: NextPage<PageProps> = (props) => {
     return (
         <Layout {...props}>
@@ -33,9 +37,10 @@ const Home: NextPage<PageProps> = (props) => {
             <Empreendimento id="empreendimento" />
             <Perspectivas id="perspectivas" />
             <Plantas />
-            <Localizacao />
+            <Localizacao id="localizacao" />
             <LocalizacaoMapa />
             <Video />
+            <Contato id="contato" />
         </Layout>
     );
 };
