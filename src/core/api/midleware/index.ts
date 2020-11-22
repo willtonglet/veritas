@@ -2,7 +2,7 @@ const headers = new Headers({
     'Content-Type': 'application/json'
 });
 
-interface ContactParams {
+export interface ContactParams {
     name: string;
     email: string;
     phone: string;
@@ -13,7 +13,7 @@ interface ContactParams {
 export default {
     async contact(data: ContactParams): Promise<boolean> {
         return new Promise((resolve, reject) => {
-            fetch('/api/submit', {
+            fetch('/api/contact', {
                 method: 'POST',
                 headers,
                 body: JSON.stringify({
