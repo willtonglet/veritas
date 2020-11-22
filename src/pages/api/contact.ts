@@ -2,10 +2,13 @@ import nodemailer from 'nodemailer';
 import { ContactParams } from '@core/api/midleware';
 
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
     auth: {
+        type: 'OAuth2',
         user: 'williamtonglet@gmail.com',
-        pass: 'Will_1989'
+        accessToken: 'byTgWXLdANv67YQN8RUn7Fuz'
     }
 });
 
