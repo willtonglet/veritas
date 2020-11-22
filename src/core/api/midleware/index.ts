@@ -1,4 +1,3 @@
-const baseUrl = 'http://localhost:3000';
 const headers = new Headers({
     'Content-Type': 'application/json'
 });
