@@ -89,5 +89,29 @@
         padding: 1.2rem 2rem;
         font-size: 1.3rem;
         margin: 1rem 0.3rem 0 0;
+
+        &:disabled {
+            opacity: 0.5;
+            filter: grayscale(1);
+            cursor: unset;
+        }
+    }
+
+    &__warning {
+        background-color: $red;
+        padding: 1rem;
+        flex-basis: 100%;
+        color: $primaryLight;
+        display: flex;
+        align-items: center;
+        margin: 0 0.3rem 1rem;
+
+        &--success {
+            background-color: $green;
+        }
+
+        * {
+            margin-right: 0.7rem;
+        }
     }
 }

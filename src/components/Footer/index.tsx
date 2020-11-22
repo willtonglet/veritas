@@ -21,6 +21,8 @@ const Footer: React.FC = () => {
                     <img
                         src="logo.svg"
                         alt="Veritás - Vila Madalena"
+                        width={233}
+                        height={63}
                         className={styles.footer__logo}
                     />
                     <div className={styles.footer__phone}>

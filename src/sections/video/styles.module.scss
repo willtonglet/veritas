@@ -96,6 +96,10 @@
                 position: relative;
                 padding: 2rem 0;
 
+                @include md {
+                    padding: 4rem;
+                }
+
                 &--active {
                     button {
                         opacity: 0;
@@ -110,15 +114,15 @@
                     }
                 }
 
-                @include md {
-                    padding: 3rem;
-                }
-
                 video {
-                    width: 100%;
+                    height: 180px;
+                    background-color: #000;
+                    @include sm {
+                        height: 380px;
+                    }
 
                     @include lg {
-                        width: unset;
+                        height: 360px;
                     }
                 }
 

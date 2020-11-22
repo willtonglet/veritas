@@ -75,6 +75,8 @@ const Header: React.FC<Props> = ({ routes }) => {
                         <img
                             src="logo.svg"
                             alt="Veritás - Vila Madalena"
+                            width={233}
+                            height={63}
                             className={clsx(hasScrolled && styles.scroll)}
                         />
                     </a>

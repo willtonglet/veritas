@@ -8,6 +8,7 @@ import styles from './styles.module.scss';
 interface Props extends React.HTMLAttributes<HTMLInputElement> {
     className?: string;
     isRequired?: boolean;
+    isDisabled?: boolean;
     value: string;
     type?: 'text' | 'email' | 'tel';
     mask?: string | (string | RegExp)[];
@@ -16,6 +17,7 @@ interface Props extends React.HTMLAttributes<HTMLInputElement> {
 const Input: React.FC<Props> = ({
     className,
     isRequired = false,
+    isDisabled = false,
     value,
     type = 'text',
     mask,
@@ -40,6 +42,7 @@ const Input: React.FC<Props> = ({
                 value={value}
                 type={type}
                 required={isRequired}
+                disabled={isDisabled}
                 {...rest}
             />
             {error && <VscError color="red" className={styles.input__status} />}

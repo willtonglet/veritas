@@ -46,7 +46,7 @@ const Home: NextPage<PageProps> = (props) => {
 };
 
 export const getStaticProps = async (): Promise<PageContentContentInterface> => {
-    const content = await api.get();
+    const content = await api.content.get();
 
     return {
         props: {

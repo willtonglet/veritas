@@ -11,10 +11,16 @@
 
     &__container {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
         color: $primaryLight;
         padding: 2rem;
+
+        @include sm {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
 
         @include lg {
             padding: 2.5rem 0;
@@ -23,6 +29,12 @@
 
     &__logo {
         height: 40px;
+        width: auto;
+        margin-bottom: 2rem;
+
+        @include sm {
+            margin-bottom: unset;
+        }
 
         @include md {
             height: unset;
@@ -33,7 +45,11 @@
         display: flex;
         align-items: flex-end;
         text-transform: uppercase;
-        text-align: right;
+        text-align: left;
+
+        @include sm {
+            text-align: right;
+        }
 
         &__icon {
             margin-right: 1rem;

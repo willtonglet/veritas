@@ -57,6 +57,7 @@ const Video: React.FC = () => {
                                 src="/video.mp4"
                                 controls={false}
                                 ref={videoRef}
+                                preload="none"
                                 onPlay={() => setIsPaused(false)}
                                 onPause={() => setIsPaused(true)}
                             />
