@@ -2,6 +2,8 @@ import { RiWhatsappFill } from 'react-icons/ri';
 import { VscChevronUp } from 'react-icons/vsc';
 
 import Container from '@components/Container';
+import Content from '@components/Content';
+import { content } from '@core/helpers/content';
 
 import styles from './styles.module.scss';
 
@@ -33,7 +35,7 @@ const Footer: React.FC = () => {
                         />
                         <div className={styles.footer__phone__text}>
                             <span>Entre em contato</span>
-                            <h3>(99) 99999-9999</h3>
+                            <Content tag="h3">{content('info.phone')}</Content>
                         </div>
                     </div>
                 </Container>
