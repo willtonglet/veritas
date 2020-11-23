@@ -37,13 +37,11 @@ const Localizacao: React.FC<SectionProps> = ({ id }) => {
                             <Reveal animation="right" duration={500} delay={200}>
                                 <button
                                     aria-label={content('localizacao.button')}
+                                    aria-hidden="true"
                                     onClick={() => setModalOpen(true)}
                                     className={styles.localizacao__button}>
                                     <Content id="localizacao.button" />
-                                    <IoIosExpand
-                                        aria-hidden="true"
-                                        className={styles.localizacao__button__icon}
-                                    />
+                                    <IoIosExpand className={styles.localizacao__button__icon} />
                                 </button>
                             </Reveal>
                         </div>

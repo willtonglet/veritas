@@ -40,12 +40,13 @@ const ModalSlider: React.FC<Props> = ({
                     )}>
                     <button
                         aria-label="Fechar"
+                        aria-hidden="true"
                         onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
                             setScrollBlocked(false);
                             onClose(e);
                         }}
                         className={styles['modal-slider__close']}>
-                        <VscClose aria-hidden="true" />
+                        <VscClose />
                     </button>
 
                     <div className={styles['modal-slider__container']}>
@@ -76,23 +77,25 @@ const ModalSlider: React.FC<Props> = ({
                     <div className={styles['modal-slider__footer']}>
                         <button
                             aria-label="Ir para imagem anterior"
+                            aria-hidden="true"
                             className={clsx(
                                 styles['modal-slider__footer__button'],
                                 isLightMode && styles['modal-slider__footer__button--light']
                             )}
                             disabled={currentSlide === 0}
                             onClick={() => setCurrentSlide(currentSlide - 1)}>
-                            <VscChevronLeft aria-hidden="true" />
+                            <VscChevronLeft />
                         </button>
                         <button
                             aria-label="Ir para próxima imagem"
+                            aria-hidden="true"
                             className={clsx(
                                 styles['modal-slider__footer__button'],
                                 isLightMode && styles['modal-slider__footer__button--light']
                             )}
                             disabled={currentSlide === slides.length - 1}
                             onClick={() => setCurrentSlide(currentSlide + 1)}>
-                            <VscChevronRight aria-hidden="true" />
+                            <VscChevronRight />
                         </button>
                         <Content tag="h6" className={styles['modal-slider__text']}>
                             {slides[currentSlide].title}

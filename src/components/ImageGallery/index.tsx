@@ -50,9 +50,10 @@ const ImageGallery: React.FC<Props> = ({ slides }) => {
                             <div className={styles['image-gallery__legend-box']}>
                                 <ButtonIcon
                                     aria-label={`Maximizar ${slide.title}`}
+                                    aria-hidden="true"
                                     onClick={() => setModalOpen(true)}
                                     className={styles['image-gallery__legend-box__maximize']}>
-                                    <IoIosExpand aria-hidden="true" />
+                                    <IoIosExpand />
                                 </ButtonIcon>
                                 <Content
                                     tag="h4"
@@ -77,7 +78,7 @@ const ImageGallery: React.FC<Props> = ({ slides }) => {
                                 currentSlide === index + currentVisible &&
                                     styles['image-gallery__navigation__thumb--active']
                             )}
-                            tabIndex={index}>
+                            tabIndex={0}>
                             <div className={styles['image-gallery__navigation__thumb__image']}>
                                 <Image
                                     src={slide.image.thumb.url}
@@ -104,17 +105,19 @@ const ImageGallery: React.FC<Props> = ({ slides }) => {
                 <div className={styles['image-gallery__navigation__control']}>
                     <button
                         aria-label="Ir para as imagens anteriores"
+                        aria-hidden="true"
                         disabled={currentVisible < 3}
                         onClick={() => setCurrentVisible(currentVisible - 3)}
                         className={styles['image-gallery__navigation__control__button']}>
-                        <VscChevronUp aria-hidden="true" />
+                        <VscChevronUp />
                     </button>
                     <button
                         aria-label="Ir para próximas imagens"
+                        aria-hidden="true"
                         disabled={currentVisible === slides.length - slicedSlides.length}
                         onClick={() => setCurrentVisible(currentVisible + 3)}
                         className={styles['image-gallery__navigation__control__button']}>
-                        <VscChevronDown aria-hidden="true" />
+                        <VscChevronDown />
                     </button>
                 </div>
             </div>

@@ -52,9 +52,10 @@ const Modal: React.FC<Props> = ({
                             ref={modalRef}>
                             <button
                                 aria-label="Fechar"
+                                aria-hidden="true"
                                 onClick={onClose}
                                 className={styles.modal__close}>
-                                <VscClose aria-hidden="true" />
+                                <VscClose />
                             </button>
                             {title && (
                                 <Content tag="h3" className={styles.modal__title}>

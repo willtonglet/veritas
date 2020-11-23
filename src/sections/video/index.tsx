@@ -49,13 +49,10 @@ const Video: React.FC = () => {
                             )}>
                             <button
                                 aria-label={isPaused ? 'Tocar vídeo' : 'Pausar vídeo'}
+                                aria-hidden="true"
                                 onClick={handleVideoPlay}
                                 className={styles.video__grid__video__frame__button}>
-                                {isPaused ? (
-                                    <AiFillPlayCircle aria-hidden="true" />
-                                ) : (
-                                    <AiFillPauseCircle aria-hidden="true" />
-                                )}
+                                {isPaused ? <AiFillPlayCircle /> : <AiFillPauseCircle />}
                             </button>
 
                             <video

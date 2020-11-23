@@ -45,9 +45,10 @@ const Footer: React.FC = () => {
                     <span>Todos os direitos reservados.</span>
                     <button
                         aria-label="Voltar ao Topo"
+                        aria-hidden="true"
                         onClick={handleButtonTop}
                         className={styles['footer-rights__button']}>
-                        <VscChevronUp aria-hidden="true" />
+                        <VscChevronUp />
                     </button>
                 </Container>
             </div>
