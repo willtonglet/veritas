@@ -52,6 +52,7 @@ const ContactForm: React.FC = () => {
                         </div>
                     ))}
                 <Input
+                    id="name"
                     isRequired
                     value={name}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
@@ -60,6 +61,7 @@ const ContactForm: React.FC = () => {
                     isDisabled={success}
                 />
                 <Input
+                    id="email"
                     isRequired
                     type="email"
                     value={email}
@@ -69,6 +71,7 @@ const ContactForm: React.FC = () => {
                     isDisabled={success}
                 />
                 <Input
+                    id="phone"
                     isRequired
                     type="tel"
                     value={phone}
@@ -79,6 +82,7 @@ const ContactForm: React.FC = () => {
                     isDisabled={success}
                 />
                 <Input
+                    id="cellphone"
                     value={cellphone}
                     type="tel"
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) =>

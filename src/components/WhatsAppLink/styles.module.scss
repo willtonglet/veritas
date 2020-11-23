@@ -13,6 +13,10 @@
     animation: bottom 0.5s ease-in-out forwards;
     transition: 0.25s ease-in-out;
 
+    span {
+        display: none;
+    }
+
     &--hidden {
         bottom: -100vh;
     }

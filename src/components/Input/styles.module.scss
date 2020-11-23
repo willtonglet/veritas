@@ -6,6 +6,10 @@
     display: flex;
     flex-direction: column;
 
+    label {
+        display: none;
+    }
+
     input {
         margin: 0.3rem;
         background-color: transparent;

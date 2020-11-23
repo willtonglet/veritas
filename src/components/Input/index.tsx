@@ -12,6 +12,8 @@ interface Props extends React.HTMLAttributes<HTMLInputElement> {
     value: string;
     type?: 'text' | 'email' | 'tel';
     mask?: string | (string | RegExp)[];
+    placeholder: string;
+    id: string;
 }
 
 const Input: React.FC<Props> = ({
@@ -21,6 +23,8 @@ const Input: React.FC<Props> = ({
     value,
     type = 'text',
     mask,
+    placeholder,
+    id,
     ...rest
 }) => {
     const [error, setError] = useState(false);
@@ -35,7 +39,9 @@ const Input: React.FC<Props> = ({
 
     return (
         <div className={clsx(styles.input, className)}>
+            <label htmlFor={id}>{placeholder}</label>
             <InputMask
+                id={id}
                 mask={mask as string}
                 formNoValidate
                 onBlur={handleEmail}
@@ -43,6 +49,7 @@ const Input: React.FC<Props> = ({
                 type={type}
                 required={isRequired}
                 disabled={isDisabled}
+                placeholder={placeholder}
                 {...rest}
             />
             {error && <VscError color="red" className={styles.input__status} />}

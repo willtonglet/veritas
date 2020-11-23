@@ -7,6 +7,8 @@ interface Props extends React.HTMLAttributes<HTMLTextAreaElement> {
     value: string;
     isRequired?: boolean;
     isDisabled?: boolean;
+    placeholder: string;
+    id: string;
 }
 
 const TextArea: React.FC<Props> = ({
@@ -14,11 +16,21 @@ const TextArea: React.FC<Props> = ({
     value,
     isRequired = false,
     isDisabled = false,
+    placeholder,
+    id,
     ...rest
 }) => {
     return (
         <div className={clsx(styles.textarea, className)}>
-            <textarea disabled={isDisabled} value={value} required={isRequired} {...rest} />
+            <label htmlFor={id}>{placeholder}</label>
+            <textarea
+                id={id}
+                placeholder={placeholder}
+                disabled={isDisabled}
+                value={value}
+                required={isRequired}
+                {...rest}
+            />
         </div>
     );
 };
