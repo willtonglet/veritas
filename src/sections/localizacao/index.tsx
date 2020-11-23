@@ -40,7 +40,10 @@ const Localizacao: React.FC<SectionProps> = ({ id }) => {
                                     onClick={() => setModalOpen(true)}
                                     className={styles.localizacao__button}>
                                     <Content id="localizacao.button" />
-                                    <IoIosExpand className={styles.localizacao__button__icon} />
+                                    <IoIosExpand
+                                        aria-hidden="true"
+                                        className={styles.localizacao__button__icon}
+                                    />
                                 </button>
                             </Reveal>
                         </div>

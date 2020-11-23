@@ -51,7 +51,10 @@ const Empreendimento: React.FC<SectionProps> = ({ id }) => {
                                                 styles['grid-box--button']
                                             )}
                                             onClick={() => setModalOpen(!isModalOpen)}>
-                                            <VscAdd className={styles['grid-box__icon']} />
+                                            <VscAdd
+                                                aria-hidden="true"
+                                                className={styles['grid-box__icon']}
+                                            />
                                             <Content id="empreendimento.modalButton" tag="h3" />
                                         </button>
                                     </Reveal>

@@ -54,7 +54,7 @@ const Modal: React.FC<Props> = ({
                                 aria-label="Fechar"
                                 onClick={onClose}
                                 className={styles.modal__close}>
-                                <VscClose />
+                                <VscClose aria-hidden="true" />
                             </button>
                             {title && (
                                 <Content tag="h3" className={styles.modal__title}>

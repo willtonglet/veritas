@@ -54,14 +54,14 @@ const ImageSlider: React.FC<Props> = ({ slides }) => {
                                 isDisabled={currentSlide === 0}
                                 onClick={() => setCurrentSlide(currentSlide - 1)}
                                 hasNoPadding>
-                                <VscChevronLeft />
+                                <VscChevronLeft aria-hidden="true" />
                             </ButtonIcon>
                             <ButtonIcon
                                 aria-label="Ir para próxima imagem"
                                 isDisabled={currentSlide === slides.length - 1}
                                 onClick={() => setCurrentSlide(currentSlide + 1)}
                                 hasNoPadding>
-                                <VscChevronRight />
+                                <VscChevronRight aria-hidden="true" />
                             </ButtonIcon>
                         </div>
                     </div>
@@ -72,7 +72,7 @@ const ImageSlider: React.FC<Props> = ({ slides }) => {
                             aria-label="Maximizar Imagem"
                             onClick={() => setModalOpen(true)}
                             className={styles['image-slider__images__maximize']}>
-                            <IoIosExpand />
+                            <IoIosExpand aria-hidden="true" />
                         </ButtonIcon>
                         {slides.map(
                             (slide, index) =>

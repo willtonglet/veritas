@@ -45,7 +45,7 @@ const ModalSlider: React.FC<Props> = ({
                             onClose(e);
                         }}
                         className={styles['modal-slider__close']}>
-                        <VscClose />
+                        <VscClose aria-hidden="true" />
                     </button>
 
                     <div className={styles['modal-slider__container']}>
@@ -82,7 +82,7 @@ const ModalSlider: React.FC<Props> = ({
                             )}
                             disabled={currentSlide === 0}
                             onClick={() => setCurrentSlide(currentSlide - 1)}>
-                            <VscChevronLeft />
+                            <VscChevronLeft aria-hidden="true" />
                         </button>
                         <button
                             aria-label="Ir para próxima imagem"
@@ -92,7 +92,7 @@ const ModalSlider: React.FC<Props> = ({
                             )}
                             disabled={currentSlide === slides.length - 1}
                             onClick={() => setCurrentSlide(currentSlide + 1)}>
-                            <VscChevronRight />
+                            <VscChevronRight aria-hidden="true" />
                         </button>
                         <Content tag="h6" className={styles['modal-slider__text']}>
                             {slides[currentSlide].title}

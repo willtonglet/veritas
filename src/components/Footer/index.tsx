@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
                         aria-label="Voltar ao Topo"
                         onClick={handleButtonTop}
                         className={styles['footer-rights__button']}>
-                        <VscChevronUp />
+                        <VscChevronUp aria-hidden="true" />
                     </button>
                 </Container>
             </div>
