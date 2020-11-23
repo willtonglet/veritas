@@ -115,10 +115,11 @@
                 }
 
                 video {
-                    height: 150px;
+                    height: 40vw;
                     background-color: #000;
 
                     @include sm {
+                        width: unset;
                         height: 340px;
                     }
 
