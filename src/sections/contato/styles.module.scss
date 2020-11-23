@@ -26,6 +26,10 @@
         @include md {
             display: flex;
             align-items: flex-end;
+
+            * {
+                flex: 1;
+            }
         }
     }
 

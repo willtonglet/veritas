@@ -9,15 +9,16 @@ const Cover: React.FC<SectionProps> = ({ id }) => {
     return (
         <section id={id} className={styles.cover}>
             <Container className={styles.cover__container}>
-                <Image
-                    src={content('cover.image.url')}
-                    width={content('cover.image.size.width')}
-                    height={content('cover.image.size.height')}
-                    alt={content('cover.image.alt')}
-                    className={styles.cover__image}
-                    layout="responsive"
-                    loading="eager"
-                />
+                <div className={styles.cover__image}>
+                    <Image
+                        src={content('cover.image.url')}
+                        width={content('cover.image.size.width')}
+                        height={content('cover.image.size.height')}
+                        alt={content('cover.image.alt')}
+                        layout="responsive"
+                        loading="eager"
+                    />
+                </div>
                 <div className={styles.cover__box}>
                     <Content id="cover.title" tag="h1" />
                 </div>

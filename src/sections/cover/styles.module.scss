@@ -30,7 +30,13 @@
     &__image {
         opacity: 0;
         align-self: flex-start;
+        flex-basis: 100%;
+        width: 100%;
         animation: fadeIn 1s ease-in-out forwards;
+
+        @include lg {
+            flex-basis: 660px;
+        }
     }
 
     &__box {

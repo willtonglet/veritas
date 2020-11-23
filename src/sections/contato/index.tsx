@@ -21,7 +21,6 @@ const Contato: React.FC<SectionProps> = ({ id }) => {
                             height={content('contato.image.size.height')}
                             alt={content('contato.image.alt')}
                             layout="responsive"
-                            className={styles.cover__image}
                         />
                     </div>
                 </Reveal>
