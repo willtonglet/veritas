@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import useOnScreen from 'hooks/useOnScreen';
 
 interface Props {
@@ -20,16 +20,19 @@ const Reveal: React.FC<Props> = ({
     const onScreen = useOnScreen(revealRef, true, '0px', threshold);
     const renderTimingAnimation: React.CSSProperties = {};
 
-    if (animation && onScreen) renderTimingAnimation.animationName = animation;
-    if (delay && onScreen) renderTimingAnimation.animationDelay = `${(delay / 1000).toString()}s`;
-    if (duration && onScreen)
-        renderTimingAnimation.animationDuration = `${(duration / 1000).toString()}s`;
-    if (onScreen) {
+    if (
+        onScreen &&
+        typeof window !== 'undefined' &&
+        window.matchMedia('(min-width: 600px)').matches
+    ) {
+        if (animation) renderTimingAnimation.animationName = animation;
+        if (delay) renderTimingAnimation.animationDelay = `${(delay / 1000).toString()}s`;
+        if (duration) renderTimingAnimation.animationDuration = `${(duration / 1000).toString()}s`;
+
         renderTimingAnimation.animationFillMode = 'forwards';
         renderTimingAnimation.animationTimingFunction = 'ease-in-out';
+        renderTimingAnimation.opacity = 0;
     }
-
-    renderTimingAnimation.opacity = 0;
 
     const childrenWithProps = React.Children.map(children, (child) =>
         React.cloneElement(child as React.ReactElement, {

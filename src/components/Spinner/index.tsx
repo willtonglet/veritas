@@ -3,11 +3,12 @@ import clsx from 'clsx';
 
 interface Props {
     className?: string;
+    color?: 'primary' | 'secondary' | 'tertiary';
 }
 
-const Spinner: React.FC<Props> = ({ className }) => {
+const Spinner: React.FC<Props> = ({ className, color = 'primary' }) => {
     return (
-        <div className={clsx(styles.spinner, className)}>
+        <div className={clsx(styles.spinner, styles[`spinner--${color}`], className)}>
             <div />
             <div />
             <div />

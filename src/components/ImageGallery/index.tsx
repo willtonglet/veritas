@@ -44,7 +44,7 @@ const ImageGallery: React.FC<Props> = ({ slides }) => {
                             height={slide.image.cover.size.height}
                             alt={slide.title}
                             layout="responsive"
-                            loading="eager"
+                            loading={index === 0 ? 'eager' : 'lazy'}
                         />
                         <Reveal animation="left" duration={500}>
                             <div className={styles['image-gallery__legend-box']}>
@@ -85,7 +85,6 @@ const ImageGallery: React.FC<Props> = ({ slides }) => {
                                     height={slide.image.thumb.size.height}
                                     alt={slide.title}
                                     layout="responsive"
-                                    loading="eager"
                                 />
                             </div>
                             <Content

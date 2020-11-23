@@ -58,10 +58,8 @@ const ModalSlider: React.FC<Props> = ({
                                         styles['modal-slider__container__image--active']
                                 )}>
                                 <Spinner
-                                    className={clsx(
-                                        styles['modal-slider__spinner'],
-                                        isLightMode && styles['modal-slider__spinner--light']
-                                    )}
+                                    color={isLightMode ? 'secondary' : 'primary'}
+                                    className={styles['modal-slider__spinner']}
                                 />
                                 <Image
                                     src={slide.image.main.url}
