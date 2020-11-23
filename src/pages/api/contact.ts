@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer';
+import { NextApiRequest, NextApiResponse } from 'next';
 import { ContactParams } from '@core/api/midleware';
 
 const transporter = nodemailer.createTransport({
@@ -12,10 +13,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-export default async (
-    req: { body: ContactParams },
-    res: { status(arg: number): { send(arg: string): void }; send(arg: unknown): void }
-): Promise<void> => {
+export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
     const { name, phone, email, message, cellphone } = req.body;
 
     if (name === '' || phone === '' || email === '' || message === '') {
