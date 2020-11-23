@@ -28,12 +28,15 @@
     }
 
     &__image {
-        opacity: 0;
         align-self: flex-start;
         flex-basis: 100%;
         width: 100%;
         position: relative;
-        animation: fadeIn 1s ease-in-out forwards;
+
+        @include sm {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
 
         @include lg {
             flex-basis: 660px;
