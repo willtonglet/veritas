@@ -20,13 +20,12 @@ const Hamburger: React.FC<Props> = ({ onClick, className, isActive = false }) =>
     return (
         <div
             role="button"
-            aria-hidden="true"
             className={clsx(styles.hamburger, isActive && styles.open, className)}
             onClick={handleClick}
             onKeyPress={handleClick as () => void}
             tabIndex={0}>
-            <div className={styles['icon-left']} />
-            <div className={styles['icon-right']} />
+            <div className={styles['icon-left']} aria-hidden="true" />
+            <div className={styles['icon-right']} aria-hidden="true" />
         </div>
     );
 };
