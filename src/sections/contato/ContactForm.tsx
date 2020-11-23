@@ -94,6 +94,7 @@ const ContactForm: React.FC = () => {
                     isDisabled={success}
                 />
                 <TextArea
+                    id="message"
                     isRequired
                     value={message}
                     onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
