@@ -3,14 +3,11 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { ContactParams } from '@core/api/midleware';
 
 const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
+    host: 'smtp.hostinger.com.br',
+    port: 587,
     auth: {
-        user: 'williamtonglet@gmail.com',
+        user: 'contato@williamtonglet.com.br',
         pass: 'Will_1989'
-    },
-    tls: {
-        rejectUnauthorized: false
     }
 });
 
