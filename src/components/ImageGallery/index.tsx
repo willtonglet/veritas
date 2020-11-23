@@ -55,7 +55,7 @@ const ImageGallery: React.FC<Props> = ({ slides }) => {
                                     <IoIosExpand aria-hidden="true" />
                                 </ButtonIcon>
                                 <Content
-                                    tag="h4"
+                                    tag="h3"
                                     className={styles['image-gallery__legend-box__label']}>
                                     {slide.title}
                                 </Content>

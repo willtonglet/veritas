@@ -82,6 +82,9 @@
 
             @include md {
                 margin-left: 0.5rem;
+            }
+
+            @include lg {
                 font-size: 2rem;
             }
         }
@@ -133,7 +136,7 @@
                     letter-spacing: 0.1rem;
                     font-size: 11px;
                     text-transform: uppercase;
-                    font-weight: $fontSemiBold;
+                    font-weight: $fontRegular;
                     text-align: center;
                     padding: 0.5rem 1rem;
                     z-index: 2;
