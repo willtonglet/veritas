@@ -1,4 +1,5 @@
 import { useState, useContext, useEffect } from 'react';
+import Link from 'next/link';
 import clsx from 'clsx';
 
 import Container from '@components/Container';
@@ -71,15 +72,17 @@ const Header: React.FC<Props> = ({ routes }) => {
         <header className={styles.header}>
             <Container className={styles.header__container}>
                 <div className={styles.header__logo}>
-                    <a href="/">
-                        <img
-                            src="logo.svg"
-                            alt="Veritás - Vila Madalena"
-                            width={233}
-                            height={63}
-                            className={clsx(hasScrolled && styles.scroll)}
-                        />
-                    </a>
+                    <Link href="/">
+                        <a>
+                            <img
+                                src="logo.svg"
+                                alt="Veritás - Vila Madalena"
+                                width={233}
+                                height={63}
+                                className={clsx(hasScrolled && styles.scroll)}
+                            />
+                        </a>
+                    </Link>
                 </div>
                 <div className={styles.header__menu}>{renderMenu}</div>
             </Container>
