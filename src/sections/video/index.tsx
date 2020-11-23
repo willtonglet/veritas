@@ -24,7 +24,7 @@ const Video: React.FC = () => {
                 <Container className={styles.video__grid}>
                     <Reveal animation="left" duration={700}>
                         <div className={styles.video__grid__logo}>
-                            <img src="/logo-white.svg" alt="Veritas" />
+                            <img src="/logo-white.svg" width={347} height={94} alt="Veritas" />
                         </div>
                     </Reveal>
                     <div className={styles.video__grid__video}>
