@@ -79,6 +79,7 @@ const Header: React.FC<Props> = ({ routes }) => {
                                 alt="Veritás - Vila Madalena"
                                 width={233}
                                 height={63}
+                                loading="eager"
                                 className={clsx(hasScrolled && styles.scroll)}
                             />
                         </a>
