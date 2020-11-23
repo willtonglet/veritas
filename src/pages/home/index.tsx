@@ -9,25 +9,15 @@ import Info from '@sections/info';
 import Empreendimento from '@sections/empreendimento';
 import Plantas from '@sections/plantas';
 
-const Perspectivas = dynamic(() => import('@sections/perspectivas'), {
-    ssr: false
-});
+import Perspectivas from '@sections/perspectivas';
 
-const Localizacao = dynamic(() => import('@sections/localizacao'), {
-    ssr: false
-});
+import Localizacao from '@sections/localizacao';
 
-const LocalizacaoMapa = dynamic(() => import('@sections/localizacao-mapa'), {
-    ssr: false
-});
+import LocalizacaoMapa from '@sections/localizacao-mapa';
 
-const Video = dynamic(() => import('@sections/video'), {
-    ssr: false
-});
+import Video from '@sections/video';
 
-const Contato = dynamic(() => import('@sections/contato'), {
-    ssr: false
-});
+import Contato from '@sections/contato';
 
 const Home: NextPage<PageProps> = (props) => {
     return (
