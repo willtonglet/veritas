@@ -32,10 +32,18 @@
         align-self: flex-start;
         flex-basis: 100%;
         width: 100%;
+        position: relative;
         animation: fadeIn 1s ease-in-out forwards;
 
         @include lg {
             flex-basis: 660px;
+        }
+
+        &__spinner {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
         }
     }
 
