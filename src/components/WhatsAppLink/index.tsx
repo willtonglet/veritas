@@ -13,7 +13,11 @@ const WhatsAppLink: React.FC<Props> = ({ href }) => {
     const [isFooter] = useIsFooter();
 
     return (
-        <a href={href} className={clsx(styles.whatsapp, isFooter && styles['whatsapp--hidden'])}>
+        <a
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            className={clsx(styles.whatsapp, isFooter && styles['whatsapp--hidden'])}>
             <FaWhatsapp className={styles.whatsapp__icon} />
         </a>
     );

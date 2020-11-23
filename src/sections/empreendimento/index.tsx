@@ -83,7 +83,7 @@ const Empreendimento: React.FC<SectionProps> = ({ id }) => {
                         ))}
                     </ul>
                 </div>
-                <Image src="/modal-logos.png" width={429} height={62} />
+                <Image src="/modal-logos.png" width={429} height={62} loading="eager" />
             </Modal>
         </>
     );

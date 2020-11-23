@@ -20,7 +20,7 @@ const Layout: React.FC<PageProps> = ({ children, content }) => {
                 <Header routes={routes} />
                 <main>{children}</main>
                 <Footer />
-                <WhatsAppLink href="/" />
+                <WhatsAppLink href={content.content.info.link as string} />
                 <ContactLink href="#contato" />
             </AppContext>
         </>

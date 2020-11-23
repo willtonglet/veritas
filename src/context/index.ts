@@ -10,7 +10,7 @@ interface Props extends PageProps {
 export default createContext<Props>({
     menuActive: 0,
     setMenuActive: () => undefined,
-    content: {},
+    content: { content: {} },
     isScrollBlocked: false,
     setScrollBlocked: () => undefined
 });
