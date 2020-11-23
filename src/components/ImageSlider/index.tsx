@@ -50,12 +50,14 @@ const ImageSlider: React.FC<Props> = ({ slides }) => {
                         )}
                         <div className={styles['image-slider__controls']}>
                             <ButtonIcon
+                                aria-label="Ir para imagem anterior"
                                 isDisabled={currentSlide === 0}
                                 onClick={() => setCurrentSlide(currentSlide - 1)}
                                 hasNoPadding>
                                 <VscChevronLeft />
                             </ButtonIcon>
                             <ButtonIcon
+                                aria-label="Ir para próxima imagem"
                                 isDisabled={currentSlide === slides.length - 1}
                                 onClick={() => setCurrentSlide(currentSlide + 1)}
                                 hasNoPadding>
@@ -67,6 +69,7 @@ const ImageSlider: React.FC<Props> = ({ slides }) => {
                 <Reveal animation="fadeIn" duration={500}>
                     <div className={styles['image-slider__images']}>
                         <ButtonIcon
+                            aria-label="Maximizar Imagem"
                             onClick={() => setModalOpen(true)}
                             className={styles['image-slider__images__maximize']}>
                             <IoIosExpand />

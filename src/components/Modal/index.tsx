@@ -50,7 +50,10 @@ const Modal: React.FC<Props> = ({
                                 isFullScreen && styles['modal__container--isFullScreen']
                             )}
                             ref={modalRef}>
-                            <button onClick={onClose} className={styles.modal__close}>
+                            <button
+                                aria-label="Fechar"
+                                onClick={onClose}
+                                className={styles.modal__close}>
                                 <VscClose />
                             </button>
                             {title && (

@@ -39,6 +39,7 @@ const ModalSlider: React.FC<Props> = ({
                         isLightMode && styles['modal-slider--light']
                     )}>
                     <button
+                        aria-label="Fechar"
                         onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
                             setScrollBlocked(false);
                             onClose(e);
@@ -74,6 +75,7 @@ const ModalSlider: React.FC<Props> = ({
 
                     <div className={styles['modal-slider__footer']}>
                         <button
+                            aria-label="Ir para imagem anterior"
                             className={clsx(
                                 styles['modal-slider__footer__button'],
                                 isLightMode && styles['modal-slider__footer__button--light']
@@ -83,6 +85,7 @@ const ModalSlider: React.FC<Props> = ({
                             <VscChevronLeft />
                         </button>
                         <button
+                            aria-label="Ir para próxima imagem"
                             className={clsx(
                                 styles['modal-slider__footer__button'],
                                 isLightMode && styles['modal-slider__footer__button--light']

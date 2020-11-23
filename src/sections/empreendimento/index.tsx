@@ -45,6 +45,7 @@ const Empreendimento: React.FC<SectionProps> = ({ id }) => {
                                 <div className={styles.empreendimento__grid__mosaic__item}>
                                     <Reveal animation="top" duration={500} delay={400}>
                                         <button
+                                            aria-label={content('empreendimento.modalButton')}
                                             className={clsx(
                                                 styles['grid-box'],
                                                 styles['grid-box--button']

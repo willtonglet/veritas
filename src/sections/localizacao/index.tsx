@@ -36,6 +36,7 @@ const Localizacao: React.FC<SectionProps> = ({ id }) => {
                             </Reveal>
                             <Reveal animation="right" duration={500} delay={200}>
                                 <button
+                                    aria-label={content('localizacao.button')}
                                     onClick={() => setModalOpen(true)}
                                     className={styles.localizacao__button}>
                                     <Content id="localizacao.button" />

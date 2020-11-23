@@ -48,6 +48,7 @@ const Video: React.FC = () => {
                                 !isPaused && styles['video__grid__video__frame--active']
                             )}>
                             <button
+                                aria-label={isPaused ? 'Tocar vídeo' : 'Pausar vídeo'}
                                 onClick={handleVideoPlay}
                                 className={styles.video__grid__video__frame__button}>
                                 {isPaused ? <AiFillPlayCircle /> : <AiFillPauseCircle />}

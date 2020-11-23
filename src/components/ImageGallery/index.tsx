@@ -49,6 +49,7 @@ const ImageGallery: React.FC<Props> = ({ slides }) => {
                         <Reveal animation="left" duration={500}>
                             <div className={styles['image-gallery__legend-box']}>
                                 <ButtonIcon
+                                    aria-label={`Maximizar ${slide.title}`}
                                     onClick={() => setModalOpen(true)}
                                     className={styles['image-gallery__legend-box__maximize']}>
                                     <IoIosExpand />
@@ -102,12 +103,14 @@ const ImageGallery: React.FC<Props> = ({ slides }) => {
 
                 <div className={styles['image-gallery__navigation__control']}>
                     <button
+                        aria-label="Ir para as imagens anteriores"
                         disabled={currentVisible < 3}
                         onClick={() => setCurrentVisible(currentVisible - 3)}
                         className={styles['image-gallery__navigation__control__button']}>
                         <VscChevronUp />
                     </button>
                     <button
+                        aria-label="Ir para próximas imagens"
                         disabled={currentVisible === slides.length - slicedSlides.length}
                         onClick={() => setCurrentVisible(currentVisible + 3)}
                         className={styles['image-gallery__navigation__control__button']}>

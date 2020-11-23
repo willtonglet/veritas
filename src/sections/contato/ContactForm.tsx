@@ -102,7 +102,10 @@ const ContactForm: React.FC = () => {
                     placeholder="Mensagem"
                     isDisabled={success}
                 />
-                <button disabled={success} className={styles['contato-form__button']}>
+                <button
+                    aria-label="Enviar"
+                    disabled={success}
+                    className={styles['contato-form__button']}>
                     Enviar
                 </button>
             </div>

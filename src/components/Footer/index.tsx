@@ -43,7 +43,10 @@ const Footer: React.FC = () => {
             <div className={styles['footer-rights']}>
                 <Container className={styles['footer-rights__container']}>
                     <span>Todos os direitos reservados.</span>
-                    <button onClick={handleButtonTop} className={styles['footer-rights__button']}>
+                    <button
+                        aria-label="Voltar ao Topo"
+                        onClick={handleButtonTop}
+                        className={styles['footer-rights__button']}>
                         <VscChevronUp />
                     </button>
                 </Container>
