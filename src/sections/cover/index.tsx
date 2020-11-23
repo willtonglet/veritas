@@ -15,6 +15,7 @@ const Cover: React.FC<SectionProps> = ({ id }) => {
                     height={content('cover.image.size.height')}
                     alt={content('cover.image.alt')}
                     className={styles.cover__image}
+                    layout="responsive"
                     loading="eager"
                 />
                 <div className={styles.cover__box}>

@@ -67,6 +67,7 @@ const Empreendimento: React.FC<SectionProps> = ({ id }) => {
                                 width={content('empreendimento.image.size.width')}
                                 height={content('empreendimento.image.size.height')}
                                 alt={content('empreendimento.image.alt')}
+                                layout="responsive"
                                 className={styles.cover__image}
                             />
                         </div>
