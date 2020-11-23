@@ -4,10 +4,14 @@ import { ContactParams } from '@core/api/midleware';
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 587,
+    port: 465,
+    secure: true,
     auth: {
-        user: 'williamtonglet@gmail.com',
-        pass: 'Will_1989'
+        user: process.env.GMAIL_USER,
+        pass: process.env.USER_PASS
+    },
+    tls: {
+        rejectUnauthorized: false
     }
 });
 
