@@ -96,7 +96,7 @@
                 position: relative;
                 padding: 2rem 0;
 
-                @include md {
+                @include sm {
                     padding: 4rem;
                 }
 
@@ -115,10 +115,15 @@
                 }
 
                 video {
-                    height: 180px;
+                    height: 150px;
                     background-color: #000;
+
                     @include sm {
-                        height: 380px;
+                        height: 340px;
+                    }
+
+                    @include md {
+                        height: 420px;
                     }
 
                     @include lg {
