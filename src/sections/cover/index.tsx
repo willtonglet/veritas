@@ -11,8 +11,8 @@ const Cover: React.FC<SectionProps> = ({ id }) => {
             <Container className={styles.cover__container}>
                 <Image
                     src={content('cover.image.url')}
-                    width={660}
-                    height={750}
+                    width={content('cover.image.size.width')}
+                    height={content('cover.image.size.height')}
                     alt={content('cover.image.alt')}
                     className={styles.cover__image}
                     loading="eager"
