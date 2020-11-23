@@ -130,10 +130,10 @@
                 @include sm {
                     background-color: $primaryLight;
                     color: $primary;
-                    font-weight: $fontRegular;
                     letter-spacing: 0.1rem;
                     font-size: 11px;
                     text-transform: uppercase;
+                    font-weight: $fontSemiBold;
                     text-align: center;
                     padding: 0.5rem 1rem;
                     z-index: 2;

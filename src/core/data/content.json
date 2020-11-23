@@ -14,7 +14,7 @@
     "info": {
       "text": "Informações e Vendas",
       "phone": "<span>(99)</span> 99999-9999",
-      "link": "https://api.whatsapp.com/send?phone=5511988278787",
+      "link": "https://api.whatsapp.com/send?phone=5511988278787&text=Entre+em+contato",
       "button": "Entre em contato via WhatsApp"
     },
     "empreendimento": {

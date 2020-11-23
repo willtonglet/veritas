@@ -114,6 +114,7 @@
 
         &--success {
             background-color: $green;
+            animation: bottom 0.5s ease-in-out forwards;
         }
 
         * {

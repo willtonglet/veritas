@@ -89,7 +89,6 @@ const ImageGallery: React.FC<Props> = ({ slides }) => {
                                 />
                             </div>
                             <Content
-                                tag="h6"
                                 className={clsx(
                                     styles['image-gallery__navigation__thumb__text'],
                                     currentSlide === index + currentVisible &&
