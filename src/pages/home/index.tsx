@@ -1,5 +1,4 @@
 import { NextPage } from 'next';
-import dynamic from 'next/dynamic';
 
 import api from '@core/api';
 
