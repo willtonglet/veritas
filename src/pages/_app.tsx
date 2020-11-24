@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import FACEBOOK_PIXEL from 'utils/pixel';
+import Pixel from 'utils/pixel';
 
 import '@core/styles/global.scss';
 
@@ -16,7 +16,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
                     name="viewport"
                     content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover"
                 />
-                {name === 'FACEBOOK_PIXEL' && <FACEBOOK_PIXEL />}
+                <Pixel />
             </Head>
             <Component {...pageProps} />
         </>
