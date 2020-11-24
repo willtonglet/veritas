@@ -14,7 +14,7 @@ export default (): JSX.Element => {
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', 'XXXXXXXXXXXXXXXXX');
+      fbq('init', '223399469207699');
       fbq('track', 'PageView');`
                 }}
             />
