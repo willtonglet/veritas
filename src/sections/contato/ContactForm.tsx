@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { VscError, VscCheck } from 'react-icons/vsc';
 import clsx from 'clsx';
 import Input from '@components/Input';
 import TextArea from '@components/TextArea';
+import useOnScreen from 'hooks/useOnScreen';
 
 import api from '@core/api';
 
@@ -12,19 +13,21 @@ const ContactForm: React.FC = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
-    const [cellphone, setCellphone] = useState('');
     const [message, setMessage] = useState('');
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
+    const formRef = useRef<HTMLFormElement>(null);
+    const onScreen = useOnScreen(formRef);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        const body = { name, email, phone, cellphone, message };
+        const body = { name, email, phone, message };
         api.midleware
             .contact(body)
             .then(() => {
                 setSuccess(true);
                 setError(false);
+                fbq('set', 'autoConfig', false, '223399469207699');
             })
             .catch(() => {
                 setError(true);
@@ -32,8 +35,12 @@ const ContactForm: React.FC = () => {
             });
     };
 
+    useEffect(() => {
+        if (onScreen) fbq('track', 'PageView');
+    }, [onScreen]);
+
     return (
-        <form method="post" onSubmit={handleSubmit}>
+        <form method="post" onSubmit={handleSubmit} ref={formRef}>
             <div className={styles['contato-form']}>
                 {(error && (
                     <div className={styles['contato-form__warning']}>
@@ -56,7 +63,10 @@ const ContactForm: React.FC = () => {
                     isRequired
                     value={name}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
-                    className={styles['contato-form__input-box']}
+                    className={clsx(
+                        styles['contato-form__input-box'],
+                        styles['contato-form__input-box--full']
+                    )}
                     placeholder="Nome"
                     isDisabled={success}
                 />
@@ -78,18 +88,6 @@ const ContactForm: React.FC = () => {
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPhone(e.target.value)}
                     className={styles['contato-form__input-box']}
                     placeholder="Telefone"
-                    mask="(99)9999-9999"
-                    isDisabled={success}
-                />
-                <Input
-                    id="cellphone"
-                    value={cellphone}
-                    type="tel"
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                        setCellphone(e.target.value)
-                    }
-                    className={styles['contato-form__input-box']}
-                    placeholder="Celular"
                     mask="(99)99999-9999"
                     isDisabled={success}
                 />

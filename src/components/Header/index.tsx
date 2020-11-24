@@ -28,7 +28,11 @@ const Header: React.FC<Props> = ({ routes }) => {
     };
 
     const renderLinkClassName = (index: number) =>
-        clsx(menuActive === index && styles.active, hasScrolled && styles.scroll);
+        clsx(
+            styles.header__menu__route,
+            menuActive === index && styles.active,
+            hasScrolled && styles.scroll
+        );
 
     useEffect(() => {
         const handleScroll = () => {
@@ -44,28 +48,28 @@ const Header: React.FC<Props> = ({ routes }) => {
 
     const renderMenu = (
         <ul>
-            {routes.map((route, index) => (
-                <li key={index}>
-                    {route.website ? (
-                        <a
-                            href={route.website}
-                            target="_blank"
-                            rel="noreferrer"
-                            className={renderLinkClassName(index)}
-                            onClick={() => handleActiveMenu(index)}>
-                            {route.name}
-                        </a>
-                    ) : (
-                        <a
-                            href={route.route}
-                            className={renderLinkClassName(index)}
-                            onClick={() => handleActiveMenu(index)}>
-                            {route.name}
-                        </a>
-                    )}
-                </li>
-            ))}
+            {routes.map(
+                (route, index) =>
+                    !route.website && (
+                        <li key={index}>
+                            <a
+                                href={route.route}
+                                className={renderLinkClassName(index)}
+                                onClick={() => handleActiveMenu(index)}>
+                                {route.name}
+                            </a>
+                        </li>
+                    )
+            )}
         </ul>
+    );
+
+    const filterButton = routes.filter((link) => link.website)[0];
+
+    const renderButton = (className: string) => (
+        <a href={filterButton.website} className={className} target="_blank" rel="noreferrer">
+            {filterButton.name}
+        </a>
     );
 
     return (
@@ -85,7 +89,10 @@ const Header: React.FC<Props> = ({ routes }) => {
                         </a>
                     </Link>
                 </div>
-                <div className={styles.header__menu}>{renderMenu}</div>
+                <div className={styles.header__menu}>
+                    {renderMenu}
+                    {renderButton(styles.header__menu__link)}
+                </div>
             </Container>
             <div className={styles.header__loader} />
             <div className={styles.header__mobile}>
@@ -100,6 +107,8 @@ const Header: React.FC<Props> = ({ routes }) => {
                         menuOpen && styles['header__mobile__drawer--open']
                     )}>
                     {renderMenu}
+
+                    {renderButton(styles.header__mobile__link)}
                 </aside>
             </div>
 

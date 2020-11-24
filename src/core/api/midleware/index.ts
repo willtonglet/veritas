@@ -6,7 +6,6 @@ export interface ContactParams {
     name: string;
     email: string;
     phone: string;
-    cellphone: string;
     message: string;
 }
 
@@ -20,7 +19,6 @@ export default {
                     name: data.name,
                     email: data.email,
                     phone: data.phone,
-                    cellphone: data.cellphone,
                     message: data.message
                 })
             })

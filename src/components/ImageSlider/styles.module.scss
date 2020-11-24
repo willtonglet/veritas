@@ -11,6 +11,10 @@
         grid-template-rows: 3rem 1fr 3rem;
     }
 
+    @include lg {
+        min-height: 680px;
+    }
+
     &__navigation {
         grid-column-start: 1;
         grid-column-end: 17;
@@ -79,11 +83,7 @@
             grid-column-end: 16;
             grid-row-start: 2;
             grid-row-end: 2;
-            height: 560px;
-        }
-
-        @include xl {
-            height: 600px;
+            height: 100%;
         }
 
         &__maximize {

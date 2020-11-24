@@ -5,6 +5,7 @@ import WhatsAppLink from '@components/WhatsAppLink';
 import ContactLink from '@components/ContactLink';
 import AppContext from 'context/AppContext';
 import Footer from '@components/Footer';
+import LgpdDrawer from '@components/LgpdDrawer';
 
 import routes from '@core/config/routes';
 
@@ -21,6 +22,7 @@ const Layout: React.FC<PageProps> = ({ children, content }) => {
                 <Footer />
                 <WhatsAppLink href={content.content.info.link as string} />
                 <ContactLink href="#contato" />
+                <LgpdDrawer />
             </AppContext>
         </>
     );

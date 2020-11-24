@@ -43,6 +43,7 @@
         background-color: $green;
         display: flex;
         align-items: center;
+        text-align: center;
         color: $primaryLight;
         text-transform: uppercase;
         padding: 0.8rem;
@@ -51,6 +52,7 @@
         transition: 0.25s ease-in-out;
 
         @include md {
+            text-align: unset;
             margin-top: 0;
             margin-left: 4rem;
             padding: 1rem 1.5rem;

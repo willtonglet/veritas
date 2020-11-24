@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import useOnScreen from 'hooks/useOnScreen';
+import useWindowSize from 'hooks/useWindowSize';
 
 interface Props {
     animation?: 'fadeIn' | 'top' | 'bottom' | 'left' | 'right' | 'blur';
@@ -7,6 +8,7 @@ interface Props {
     duration?: number;
     threshold?: number;
     className?: string;
+    hasNoAnimationOnMobile?: boolean;
 }
 
 const Reveal: React.FC<Props> = ({
@@ -14,25 +16,24 @@ const Reveal: React.FC<Props> = ({
     animation = 'fadeIn',
     delay,
     duration = 250,
-    threshold
+    threshold,
+    hasNoAnimationOnMobile = true
 }) => {
     const revealRef = useRef(null);
     const onScreen = useOnScreen(revealRef, true, '0px', threshold);
+    const size = useWindowSize();
     const renderTimingAnimation: React.CSSProperties = {};
+    const renderAnimation = hasNoAnimationOnMobile && size > 600;
 
-    if (
-        onScreen &&
-        typeof window !== 'undefined' &&
-        window.matchMedia('(min-width: 600px)').matches
-    ) {
+    if (onScreen && renderAnimation) {
         if (animation) renderTimingAnimation.animationName = animation;
         if (delay) renderTimingAnimation.animationDelay = `${(delay / 1000).toString()}s`;
         if (duration) renderTimingAnimation.animationDuration = `${(duration / 1000).toString()}s`;
 
         renderTimingAnimation.animationFillMode = 'forwards';
         renderTimingAnimation.animationTimingFunction = 'ease-in-out';
-        renderTimingAnimation.opacity = 0;
     }
+    renderTimingAnimation.opacity = renderAnimation ? 0 : 1;
 
     const childrenWithProps = React.Children.map(children, (child) =>
         React.cloneElement(child as React.ReactElement, {

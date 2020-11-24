@@ -1,4 +1,5 @@
 declare module '*.png';
+declare const fbq: any;
 
 interface PageProps {
     content: PageContentInterface;

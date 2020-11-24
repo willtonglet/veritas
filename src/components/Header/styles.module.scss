@@ -59,7 +59,9 @@
         position: relative;
 
         @include lg {
-            display: unset;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         ul {
@@ -69,11 +71,11 @@
             padding: 0;
         }
 
-        a {
+        &__route {
             color: $primaryLight;
             font-weight: $fontLight;
             text-transform: uppercase;
-            padding: 3rem 1.5rem 3.5rem;
+            padding: 3.5rem 1.3rem 3.5rem;
             display: block;
             position: relative;
             transition: 0.25s ease-in-out;
@@ -83,15 +85,17 @@
             }
 
             &::before {
-                background-color: $secondary;
-                height: 1px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 0;
-                display: block;
-                content: '';
-                transition: 0.25s ease-in-out;
+                @include lg {
+                    background-color: $secondary;
+                    height: 1px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    display: block;
+                    content: '';
+                    transition: 0.25s ease-in-out;
+                }
             }
 
             &:hover,
@@ -99,6 +103,20 @@
                 &::before {
                     width: 100%;
                 }
+            }
+        }
+
+        &__link {
+            background-color: $secondary;
+            display: block;
+            padding: 1rem;
+            color: $primary;
+            text-transform: uppercase;
+            margin-left: 2rem;
+            transition: 0.25s ease-in-out;
+
+            &:hover {
+                background-color: $primaryLight;
             }
         }
     }
@@ -123,11 +141,20 @@
             display: none;
         }
 
+        &__link {
+            background-color: $secondary;
+            display: block;
+            padding: 1rem;
+            font-size: 1.3rem;
+            color: $primary;
+            text-transform: uppercase;
+        }
+
         &__button {
             z-index: 11;
+            right: 2rem;
+            top: 3rem;
             position: absolute;
-            right: 1rem;
-            top: 2.2rem;
         }
 
         &__drawer {
@@ -151,7 +178,7 @@
                 display: flex;
                 flex-direction: column;
                 list-style: none;
-                margin: 0;
+                margin: 0 0 2rem;
                 padding: 0;
 
                 li {
@@ -164,6 +191,7 @@
                         font-weight: $fontLight;
                         border-bottom: 2px solid $secondary;
                         text-transform: uppercase;
+                        display: inline;
                     }
                 }
             }
