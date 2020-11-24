@@ -4,6 +4,7 @@ import Container from '@components/Container';
 import Content from '@components/Content';
 import Reveal from '@components/Reveal';
 import { content } from '@core/helpers/content';
+import Pixel from 'utils/pixel';
 
 import ContactForm from './ContactForm';
 
