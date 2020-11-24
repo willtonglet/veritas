@@ -19,7 +19,10 @@ const ContactLink: React.FC<Props> = ({ href }) => {
         <a
             href={href}
             className={clsx(styles['contact-link'], isFooter && styles['contact-link--hidden'])}
-            onClick={() => setMenuActive(4)}>
+            onClick={() => {
+                setMenuActive(4);
+                fbq('trackCustom', 'FaleCorretor');
+            }}>
             <div className={styles['contact-link__text']}>
                 <span className={styles['contact-link__text__title']}>Fale com um consultor</span>
                 <span>direto da construtora</span>

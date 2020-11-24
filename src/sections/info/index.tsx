@@ -1,4 +1,5 @@
 import { FaWhatsapp } from 'react-icons/fa';
+
 import Container from '@components/Container';
 import Content from '@components/Content';
 import { content } from '@core/helpers/content';
@@ -17,6 +18,7 @@ const Info: React.FC = () => {
                     href={content('info.link')}
                     target="_blank"
                     rel="noreferrer"
+                    onClick={() => fbq('trackCustom', 'EntreContato')}
                     className={styles.info__whatsapp}>
                     <FaWhatsapp className={styles.info__whatsapp__icon} />
                     <Content id="info.button" />

@@ -27,7 +27,7 @@ const ContactForm: React.FC = () => {
             .then(() => {
                 setSuccess(true);
                 setError(false);
-                fbq('set', 'autoConfig', false, '223399469207699');
+                fbq('trackCustom', 'Enviar');
             })
             .catch(() => {
                 setError(true);
@@ -36,7 +36,7 @@ const ContactForm: React.FC = () => {
     };
 
     useEffect(() => {
-        if (onScreen) fbq('track', 'PageView');
+        if (onScreen) fbq('track', 'VIEW_CONTENT');
     }, [onScreen]);
 
     return (

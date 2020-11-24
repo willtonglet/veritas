@@ -17,6 +17,7 @@ const WhatsAppLink: React.FC<Props> = ({ href }) => {
             href={href}
             target="_blank"
             rel="noreferrer"
+            onClick={() => fbq('trackCustom', 'EntreContato')}
             className={clsx(styles.whatsapp, isFooter && styles['whatsapp--hidden'])}>
             <span>Whatsapp</span>
             <FaWhatsapp className={styles.whatsapp__icon} />

@@ -18,6 +18,7 @@ const Cover: React.FC<SectionProps> = ({ id }) => {
         <a
             href={filterButton.website}
             className={styles.cover__box__button}
+            onClick={() => fbq('trackCustom', 'FacaTourVirtual')}
             target="_blank"
             rel="noreferrer">
             <Content id="cover.button" />
