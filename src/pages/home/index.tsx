@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 
 import api from '@core/api';
 
@@ -6,12 +7,13 @@ import Layout from '@components/Layout';
 import Cover from '@sections/cover';
 import Info from '@sections/info';
 import Empreendimento from '@sections/empreendimento';
-import Plantas from '@sections/plantas';
-import Perspectivas from '@sections/perspectivas';
-import Localizacao from '@sections/localizacao';
-import LocalizacaoMapa from '@sections/localizacao-mapa';
-import Video from '@sections/video';
-import Contato from '@sections/contato';
+
+const Plantas = dynamic(() => import('@sections/plantas'), { ssr: false });
+const Perspectivas = dynamic(() => import('@sections/perspectivas'), { ssr: false });
+const Localizacao = dynamic(() => import('@sections/localizacao'), { ssr: false });
+const LocalizacaoMapa = dynamic(() => import('@sections/localizacao-mapa'), { ssr: false });
+const Video = dynamic(() => import('@sections/video'), { ssr: false });
+const Contato = dynamic(() => import('@sections/contato'), { ssr: false });
 
 const Home: NextPage<PageProps> = (props) => {
     return (
