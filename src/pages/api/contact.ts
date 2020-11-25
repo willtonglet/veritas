@@ -32,7 +32,7 @@ const mailer = ({ name, email, phone, message }: ContactParams) => {
     const from = name && email ? `${name} <${email}>` : `${name || email}`;
     const txt = {
         from,
-        to: 'williamtonglet@gmail.com',
+        to: 'nihonimoveissp@gmail.com',
         subject: `Veritás contato - de ${from}`,
         text: `${message} - Telefone ${phone}`,
         replyTo: from
