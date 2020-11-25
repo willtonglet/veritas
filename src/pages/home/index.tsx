@@ -6,8 +6,8 @@ import api from '@core/api';
 import Layout from '@components/Layout';
 import Cover from '@sections/cover';
 import Info from '@sections/info';
-import Empreendimento from '@sections/empreendimento';
 
+const Empreendimento = dynamic(() => import('@sections/empreendimento'), { ssr: false });
 const Plantas = dynamic(() => import('@sections/plantas'), { ssr: false });
 const Perspectivas = dynamic(() => import('@sections/perspectivas'), { ssr: false });
 const Localizacao = dynamic(() => import('@sections/localizacao'), { ssr: false });
