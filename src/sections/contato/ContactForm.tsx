@@ -36,7 +36,7 @@ const ContactForm: React.FC = () => {
     };
 
     useEffect(() => {
-        if (onScreen) fbq('track', 'VIEW_CONTENT');
+        if (onScreen) fbq('track', 'ViewContent');
     }, [onScreen]);
 
     return (
