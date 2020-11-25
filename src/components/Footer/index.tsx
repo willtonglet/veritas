@@ -25,6 +25,7 @@ const Footer: React.FC = () => {
                         alt="Veritás - Vila Madalena"
                         width={233}
                         height={63}
+                        loading="lazy"
                         className={styles.footer__logo}
                     />
                     <div className={styles.footer__phone}>
