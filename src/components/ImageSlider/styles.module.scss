@@ -72,11 +72,11 @@
         grid-row-start: 0;
         grid-row-end: 1;
         background-color: $primaryLight;
-        padding: 5rem;
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 6rem 2rem 4rem;
 
         @include md {
             grid-column-start: 5;
@@ -84,12 +84,14 @@
             grid-row-start: 2;
             grid-row-end: 2;
             height: 100%;
+            padding: 5rem;
         }
 
         &__maximize {
             position: absolute;
             top: 0;
             right: 0;
+            z-index: 2;
         }
 
         &__image {
