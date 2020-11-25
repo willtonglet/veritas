@@ -80,7 +80,7 @@ const Header: React.FC<Props> = ({ routes }) => {
         <header className={styles.header}>
             <Container className={styles.header__container}>
                 <div className={styles.header__logo}>
-                    <Link href="/">
+                    <Link href="/" prefetch={false}>
                         <a>
                             <img
                                 src="logo.svg"
