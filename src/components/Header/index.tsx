@@ -1,4 +1,5 @@
 import { useState, useContext, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
 
@@ -82,12 +83,13 @@ const Header: React.FC<Props> = ({ routes }) => {
                 <div className={styles.header__logo}>
                     <Link href="/" prefetch={false}>
                         <a>
-                            <img
-                                src="logo.svg"
+                            <Image
+                                src="/logo.svg"
                                 alt="Veritás - Vila Madalena"
                                 width={233}
                                 height={63}
                                 loading="eager"
+                                priority
                                 className={clsx(hasScrolled && styles.scroll)}
                             />
                         </a>

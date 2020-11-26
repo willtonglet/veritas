@@ -85,7 +85,7 @@ const ImageGallery: React.FC<Props> = ({ slides }) => {
                                     height={slide.image.thumb.size.height}
                                     alt={slide.title}
                                     layout="responsive"
-                                    loading="eager"
+                                    loading={currentVisible === 3 ? 'lazy' : 'eager'}
                                 />
                             </div>
                             <Content
