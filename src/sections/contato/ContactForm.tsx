@@ -3,7 +3,7 @@ import { VscError, VscCheck } from 'react-icons/vsc';
 import clsx from 'clsx';
 import Input from '@components/Input';
 import TextArea from '@components/TextArea';
-import useOnScreen from 'hooks/useOnScreen';
+import useOnScreen from '@hooks/useOnScreen';
 
 import api from '@core/api';
 

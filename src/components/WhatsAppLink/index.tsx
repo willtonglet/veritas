@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { FaWhatsapp } from 'react-icons/fa';
 
-import useIsFooter from 'hooks/useIsFooter';
+import useIsFooter from '@hooks/useIsFooter';
 
 import styles from './styles.module.scss';
 

@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 import Content from '@components/Content';
 import Spinner from '@components/Spinner';
-import AppContext from 'context';
+import AppContext from '@context';
 
 import styles from './styles.module.scss';
 

@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Header from '@components/Header';
 import WhatsAppLink from '@components/WhatsAppLink';
 import ContactLink from '@components/ContactLink';
-import AppContext from 'context/AppContext';
+import AppContext from '@context/AppContext';
 import Footer from '@components/Footer';
 import LgpdDrawer from '@components/LgpdDrawer';
 

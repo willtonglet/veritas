@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import Container from '@components/Container';
 import Hamburger from '@components/Hamburger';
 import PageProgress from './PageProgress';
-import Context from 'context';
+import Context from '@context';
 
 import styles from './styles.module.scss';
 

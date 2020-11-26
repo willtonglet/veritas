@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { VscClose } from 'react-icons/vsc';
 
 import Content from '@components/Content';
-import AppContext from 'context';
+import AppContext from '@context';
 
 import styles from './styles.module.scss';
 

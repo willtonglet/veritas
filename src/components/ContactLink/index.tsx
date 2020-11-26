@@ -2,8 +2,8 @@ import { useContext } from 'react';
 import clsx from 'clsx';
 import { VscChevronDown } from 'react-icons/vsc';
 
-import Context from 'context';
-import useIsFooter from 'hooks/useIsFooter';
+import Context from '@context';
+import useIsFooter from '@hooks/useIsFooter';
 
 import styles from './styles.module.scss';
 

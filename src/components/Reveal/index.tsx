@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import useOnScreen from 'hooks/useOnScreen';
-import useWindowSize from 'hooks/useWindowSize';
+import useOnScreen from '@hooks/useOnScreen';
+import useWindowSize from '@hooks/useWindowSize';
 
 interface Props {
     animation?: 'fadeIn' | 'top' | 'bottom' | 'left' | 'right' | 'blur';

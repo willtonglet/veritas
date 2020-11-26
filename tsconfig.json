@@ -9,9 +9,7 @@
     "rootDir": "src",
     "baseUrl": "src",
     "paths": {
-      "@components/*": ["components/*"],
-      "@core/*": ["core/*"],
-      "@sections/*": ["sections/*"],
+      "@*": ["*"],
     },
     "lib": ["dom", "es2017"],
     "module": "esnext",
