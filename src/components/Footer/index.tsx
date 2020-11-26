@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { RiWhatsappFill } from 'react-icons/ri';
 import { VscChevronUp } from 'react-icons/vsc';
 
@@ -21,11 +20,12 @@ const Footer: React.FC = () => {
         <>
             <footer className={styles.footer}>
                 <Container className={styles.footer__container}>
-                    <Image
-                        src="/logo.svg"
+                    <img
+                        src="logo.svg"
                         alt="Veritás - Vila Madalena"
                         width={233}
                         height={63}
+                        loading="lazy"
                         className={styles.footer__logo}
                     />
                     <div className={styles.footer__phone}>
